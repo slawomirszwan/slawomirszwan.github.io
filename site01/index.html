@@ -25,7 +25,7 @@
     }
     body > *:nth-child(2) {
       background-color: yellow;
-      height: 10em;
+      height: auto;
     }
     body > *:nth-child(3) {
       background-color: blue;
@@ -62,6 +62,26 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    
+    /*--------------*/
+    .shadowed {
+      border: 3px solid #fff;
+      box-shadow: 0 3px 4px rgba(0,0,0,.5);
+    }
+    .foto1 { 
+      margin-bottom: -125px;
+      transform: rotate(2.5deg);
+    }
+    .foto2 {
+      transform: rotate(-7deg);
+    }
+    .foto3 {
+      transform: rotate(2.5deg);
+    }
+    .foto4 {
+      margin-top: -40px;
+      transform: rotate(-2.5deg);
+    }
   </style>
 </head>
 <body>
@@ -96,6 +116,11 @@
     <section id="point1">
       <h2>Point1</h2>
       <p>point1</p>
+      <img src="http://mazurytravel.com.pl/resources/image/news/Wydarzenia/480x231/Wielkanoc.JPG" class="shadowed foto1" alt="foto">
+      <img src="http://mazurytravel.com.pl/resources/image/news/Wydarzenia/480x231/Wielkanoc.JPG" class="shadowed foto2" alt="foto">
+      <img src="http://mazurytravel.com.pl/resources/image/news/Wydarzenia/480x231/Wielkanoc.JPG" class="shadowed foto3" alt="foto">
+      <img src="http://mazurytravel.com.pl/resources/image/news/Wydarzenia/480x231/Wielkanoc.JPG" class="shadowed foto4" alt="foto">
+       
     </section>
     
     <section id="point2">
