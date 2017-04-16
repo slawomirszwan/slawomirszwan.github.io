@@ -41,9 +41,8 @@
     }
     nav ul li {
       background-color: hsl(170,50%,25%);
-      transition: background-color .7s ease-out .3s;
-      transition: transform .7s ease-out .3s;
-      
+      transition: all .7s ease-out .3s;
+            
       color: white;
       padding: 0.5em 2em;
       margin: 1em;
@@ -57,6 +56,11 @@
     nav ul li a, nav a:visited, nav a:active, nav a:hover {      
       text-decoration: none;      
       color: white;
+    }
+    .bg-clip {
+      background: url(http://images.all-free-download.com/images/graphiclarge/golden_background_311002.jpg) repeat;
+      background-clip: text;
+      text-fill-color: transparent;
     }
   </style>
 </head>
@@ -84,6 +88,10 @@
   </header>
   <main>
     <h1>Main content</h1>
+    
+    <div class="bg-clip">
+      <h1>kablamo!</h1>
+    </div>
     
     <section id="point1">
       <h2>Point1</h2>
