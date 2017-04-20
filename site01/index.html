@@ -81,7 +81,67 @@
     .foto4 {
       margin-top: -40px;
       transform: rotate(-2.5deg);
+    } 
+                                               
+    
+    
+    
+    /* odczyt atrybutu z img, :after content */  
+    ul.polaroids li {
+      background-color: white;
+      padding: 0.3em; 
+      margin: 0.3em;
+      display: inline-block;
     }
+    ul.polaroids a:after {
+      content: attr(title);
+      color: green;
+      display: block;
+      text-align: center;
+    } 
+   
+    ul.polaroids li {
+      transform: rotate(-5deg);
+    }  
+    
+    /* Rotate all even images 2 degrees */
+    ul.polaroids li:nth-child(even) {
+      transform: rotate(5deg);
+    }
+    ul.polaroids li:nth-child(3n) {
+      transform: none;
+      position: relative;
+      top: -5px;
+    } 
+    ul.polaroids li:hover  {
+      transform: scale(1.25);
+      transition: transform .15s linear;
+      position: relative;
+      z-index: 5;
+    }   
+    
+    /* --------------------------------- */
+    span[data-descr] {
+  position: relative;
+  text-decoration: underline;
+  color: #00F;
+  cursor: help;
+}
+
+span[data-descr]:hover::after {
+  content: attr(data-descr);
+  position: absolute;
+  left: 0;
+  top: 24px;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  border-radius: 10px;
+  background-color: #ffffcc;
+  padding: 12px;
+  color: #000000;
+  font-size: 14px;
+  z-index: 1;
+}
   </style>
 </head>
 <body>
@@ -132,7 +192,42 @@
       </figure> 
       
     </section>
+ 
+    <section id="point2">
+      <h2>Point2</h2>
+      <p>point2</p>
+<ul class="polaroids">
+  <li>
+    <a href="http://www.flickr.com/photos/zurbinc/3971679981/" title="Roeland!">
+      <img src="https://c1.staticflickr.com/3/2489/3971679981_1630dbe2bb.jpg" width="150" height="200" alt="Roeland!" />
+    </a>
+  </li>
+  <li>
+    <a href="http://www.flickr.com/photos/zurbinc/3985295842/" title="Discussion">
+      <img src="https://c1.staticflickr.com/3/2489/3971679981_1630dbe2bb.jpg" width="150" height="200" alt="Discussion" />
+    </a>
+  </li>
+  <li>
+    <a href="http://www.flickr.com/photos/zurbinc/3971679981/" title="Roeland!">
+      <img src="https://c1.staticflickr.com/3/2489/3971679981_1630dbe2bb.jpg" width="150" height="200" alt="Roeland!" />
+    </a>
+  </li>
+  <li>
+    <a href="http://www.flickr.com/photos/zurbinc/3985295842/" title="Discussion">
+      <img src="https://c1.staticflickr.com/3/2489/3971679981_1630dbe2bb.jpg" width="150" height="200" alt="Discussion" />
+    </a>
+  </li>
+
+</ul>      
+    </section>  
     
+    <hr> 
+    <p>Here is the live example of the above code.<br />
+  We have some <span data-descr="collection of words and punctuation">text</span> here with a few
+  <span data-descr="small popups which also hide again">tooltips</span>.<br />
+  Don't be shy, hover over to take a <span data-descr="not to be taken literally">look</span>.
+</p>
+    </hr>
     
   </main>
   <footer>
