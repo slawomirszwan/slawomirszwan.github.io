@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="with-device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>flex</title>
+  
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <h1>flex</h1> 
+  <p>https://www.youtube.com/watch?v=k32voqQhODc</p>
+  
+  <pre>
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  </pre>
+  
+<!-- ============================================== -->
+<hr>
+<h2>Przykład1</h2>
+<div class="container">
+  <form action="">
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input type="text" id="name">
+    </div>  
+    <div class="form-row">
+      <label for="favColor">Favorite Color</label>
+      <input type="text" id="favColor">
+    </div>  
+  
+  </form>
+</div>  
+
+<div class="container ex01-01">
+  <form action="">
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input type="text" id="name">
+    </div>  
+    <div class="form-row">
+      <label for="favColor">Favorite Color</label>
+      <input type="text" id="favColor">
+    </div>  
+  
+  </form>
+</div>  
+
+<div class="container ex01-02">
+  <form action="">
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input type="text" id="name">
+    </div>  
+    <div class="form-row">
+      <label for="favColor">Favorite Color</label>
+      <input type="text" id="favColor">
+    </div>  
+  
+  </form>
+</div>  
+
+<div class="container ex01-03">
+  <form action="">
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input type="text" id="name">
+    </div>  
+    <div class="form-row">
+      <label for="favColor">Favorite Color</label>
+      <input type="text" id="favColor">
+    </div>  
+  
+  </form>
+</div> 
+<!-- ============================================== -->
+<hr>
+<h2>Przykład2 - kolumny</h2>
+
+<div class="container column-layout ex02-01">
+  <div class="main-column">
+    <h3>Main content</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+  <div class="sidebar-one">
+    <h3>Sidebar One</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+  <div class="sidebar-two">
+    <h3>Sidebar Two</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+</div>
+
+<p>włączenie flex</p>
+<div class="container column-layout ex02-02">
+  <div class="main-column">
+    <h3>Main content</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+  <div class="sidebar-one">
+    <h3>Sidebar One</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+  <div class="sidebar-two">
+    <h3>Sidebar Two</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+</div>
+
+<p>zmiana kolejnosci i rozmiar -proporcje</p>
+<div class="container column-layout ex02-03">
+  <div class="main-column">
+    <h3>Main content</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+  <div class="sidebar-one">
+    <h3>Sidebar One</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+  <div class="sidebar-two">
+    <h3>Sidebar Two</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+</div>
+<!-- ============================================== -->
+<hr>
+<h2>Przykład3- marginesy !</h2>
+
+<div class="container call-outs-container ex03-01">
+  <div class="call-out">
+    <h3>Feature 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+  <div class="call-out">
+    <h3>Feature 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+  <div class="call-out">
+    <h3>Feature 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+</div>
+
+
+
+<div class="container call-outs-container ex03-02">
+  <div class="call-out">
+    <h3>Feature 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+  <div class="call-out">
+    <h3>Feature 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+  <div class="call-out">
+    <h3>Feature 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+</div>
+
+
+<div class="container call-outs-container ex03-03">
+  <div class="call-out">
+    <h3>Feature 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+  <div class="call-out">
+    <h3>Feature 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+  <div class="call-out">
+    <h3>Feature 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+</div>
+
+<p>media query</p>
+<div class="container call-outs-container ex03-04">
+  <div class="call-out">
+    <h3>Feature 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+  <div class="call-out">
+    <h3>Feature 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+  <div class="call-out">
+    <h3>Feature 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, qui in unde reiciendis perspiciatis repellendus sed magnam odit corrupti illo doloremque quis eligendi commodi dolores corporis maxime excepturi. Consectetur, nesciunt!</p>
+  </div>
+
+</div>
+
+
+
+
+<!-- ============================================== -->
+<hr>
+<h2>Przykład4 !</h2>
+
+
+<div class="container call-outs-container ex04-01">
+  <figure class="fixed-size">
+    <img src="http://lorempizza.com/200/200" alt=""> 
+    <figcaption>Pizza Neopoliani</figcaption> 
+  </figure>
+  <figure class="fixed-size">
+    <img src="http://lorempizza.com/300/300" alt="">  
+  </figure>
+  <figure class="fixed-size">
+    <img src="http://lorempizza.com/200/200" alt="">  
+  </figure>
+  <figure class="fixed-size">
+    <img src="http://lorempizza.com/400/200" alt="">
+    <figcaption>Pizza Valenzia</figcaption>   
+  </figure>
+  <figure class="fixed-size">  
+    <figcaption>Pizza Valenzia</figcaption> 
+    <img src="http://lorempizza.com/200/200" alt="">  
+  </figure>
+</div>
+  <script src="js/main.js"></script>
+</body>
+</html>

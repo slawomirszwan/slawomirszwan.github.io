@@ -1,0 +1,274 @@
+
+html {
+  background-color: hsla(150, 50%, 50%, .5);
+  padding: 10px;
+}
+
+body {
+  background-color: hsla(150, 60%, 50%, .9);
+  padding: 10px; 
+  color: hsl(150, 50%, 5%);
+}
+
+.container {
+  /*padding: 10px; */
+  outline: 1px solid red;
+}
+
+/* --------------------- */
+.ex01-01 .form-row {
+  display: flex;
+}
+
+.ex01-01 .form-row label {
+  padding-right: 10px; 
+}
+
+.ex01-01 .form-row input { 
+}
+
+/* --------------------- */
+.ex01-02 .form-row {
+  display: flex;
+}
+
+.ex01-02 .form-row label {
+  padding-right: 10px; 
+}
+
+.ex01-02 .form-row input {
+   flex: 1;
+}
+
+/* --------------------- */
+.ex01-03 .form-row {
+  display: flex;
+}
+
+.ex01-03 .form-row label {
+  padding-right: 10px; 
+  text-align: right;
+  flex: 1; 
+}
+
+.ex01-03 .form-row input {
+   flex: 4;
+}
+/* ======================================= */
+
+.ex02-01.column-layout {
+  max-width: 1300px;
+  background-color: #FFF;
+  margin: 40px auto 0 auto;
+  line-height: 1.65;
+  padding: 20px 50px;
+}
+
+.ex02-01 .main-column {
+  
+}
+
+.ex02-01 .sidebar-one {
+  
+}
+
+.ex02-01 .sidebar-two {
+  
+}
+/* --------------------- */
+
+.ex02-02.column-layout {
+  max-width: 1300px;
+  background-color: #FFF;
+  margin: 40px auto 0 auto;
+  line-height: 1.65;
+  padding: 20px 50px; 
+  
+  display: flex;
+}
+
+.ex02-02 .main-column {
+  
+}
+
+.ex02-02 .sidebar-one {
+  
+}
+
+.ex02-02 .sidebar-two {
+  
+}
+/* --------------------- */
+
+.ex02-03.column-layout {
+  max-width: 1300px;
+  background-color: #FFF;
+  margin: 40px auto 0 auto;
+  line-height: 1.65;
+  padding: 20px 50px; 
+  
+  display: flex;
+}
+
+.ex02-03 .main-column {
+  flex:3;  
+}
+
+.ex02-03 .sidebar-one {
+  flex:1; 
+  order: -1;
+}
+
+.ex02-03 .sidebar-two {
+  flex:1;
+}
+/* --------------------- */
+
+.ex03-01 {
+  max-width: 1400px;
+  margin: 40px auto 0 auto;
+}
+
+.ex03-01 .call-out {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.ex03-01 .call-out:nth-child(1) {
+  background-color : red;
+}
+.ex03-01 .call-out:nth-child(2) {
+  background-color : blue;
+}
+.ex03-01 .call-out:nth-child(3) {
+  background-color : green;
+}
+
+/* ------------------------- */
+
+.ex03-02 {
+  max-width: 1400px;
+  margin: 40px auto 0 auto; 
+  
+  display:flex;    
+  
+  /*default*/
+  align-items: strech; /* flex-start, flex-end, center baseline stretch*/
+}
+
+.ex03-02 .call-out {
+  padding: 20px;
+  margin-bottom: 20px;
+  
+  margin-right: 20px;
+}
+.ex03-02 .call-out:last-child {
+  margin-right: 0;
+}
+.ex03-02 .call-out:nth-child(1) {
+  background-color : red;
+}
+.ex03-02 .call-out:nth-child(2) {
+  background-color : blue;
+}
+.ex03-02 .call-out:nth-child(3) {
+  background-color : green;
+}
+
+
+
+/* ------------------------- */
+
+.ex03-03 {
+  max-width: 1400px;
+  margin: 40px auto 0 auto; 
+  
+  display:flex;    
+  
+  /*default*/
+  /*align-items: strech;*/ /* flex-start, flex-end, center baseline stretch*/
+  
+  justify-content: space-between;
+}
+
+.ex03-03 .call-out {
+  padding: 20px;
+  margin-bottom: 20px; 
+  
+  box-sizing: border-box;
+  flex-basis: 30%;
+}
+
+.ex03-03 .call-out:nth-child(1) {
+  background-color : red;
+}
+.ex03-03 .call-out:nth-child(2) {
+  background-color : blue;
+}
+.ex03-03 .call-out:nth-child(3) {
+  background-color : green;
+}
+
+/* ------------------------- */
+
+.ex03-04 {
+  max-width: 1400px;
+  margin: 40px auto 0 auto; 
+  
+  display:flex; 
+  flex-direction:column;   
+  justify-content: space-between;
+}
+
+.ex03-04 .call-out {
+  padding: 20px;  
+  box-sizing: border-box;
+  flex-basis: 30%;
+}
+
+.ex03-04 .call-out:nth-child(1) {
+  background-color : red;
+}
+.ex03-04 .call-out:nth-child(2) {
+  background-color : blue;
+}
+.ex03-04 .call-out:nth-child(3) {
+  background-color : green;
+  background: url('http://lorempizza.com/500/500');
+}
+
+
+@media (min-width:900px) {
+  .ex03-04 {
+  flex-direction: row;  
+}
+
+}
+
+/* ------------------------- */
+
+.ex04-01 {
+  max-width: 1400px;
+  margin: 40px auto 0 auto; 
+  background-color: white;
+  padding: 30px 0;
+  
+  display: flex;     
+  align-items: center;
+  justify-content: space-around; 
+  
+  flex-wrap: wrap;
+}
+
+.ex04-01 .fixed-size {
+/*   width: 150px;
+   height: 100px; */ 
+}
+
+.ex04-01 .fixed-size img {
+  width: 100%; 
+}
+
+figure {
+  outline: 1px solid green;
+}
