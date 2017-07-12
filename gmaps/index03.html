@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <title>Document</title>                                           
+  
+  <style>
+    html { height:100%;}
+    body { height:100%; margin:0; padding:0;}
+    #googleMap { height:400px; width:100%;}
+  </style>
+</head>
+<body>
+<!--
+mark lewin
+appswithmaps.net
+
+geografy 101
+get API key
+
+mapa nie jest sferą
+
+code.google.com/apis/console
+google.maps. javascript API v3
+ 
+-->
+<hr>
+<div id="googleMap" ></div>
+
+<button id="btnTerrain">show Terrain</button>
+<button id="btnHybrid">show Hybrid</button>
+<script>
+/*
+//http://appswithmaps.net/gmaps/latlngfinder
+//var mapOptions = { center: new google.maps.LatLng(54.549803,18.461634), zoom: 16 };
+https://marklewin.github.io/gmaps/latlongfinder/index.html
+
+*/
+function initialize() {
+
+  var mapOptions = { 
+    center: new google.maps.LatLng(54.549803,18.461634), 
+    zoom: 16,                                           
+    
+    //disableDefaultUI: true,
+    
+    zoomControl: true, 
+    zoomControlOptions: {
+      style: google.maps.ZoomControlStyle.SMALL,
+      position: google.maps.ControlPosition.BOTTOM_LEFT
+    },
+    
+    panControl: true, 
+    
+    mapTypeControl: true, 
+    mapTypeControlOptions: {
+      mapTypeIds: [
+        google.maps.MapTypeId.ROADMAP,
+        google.maps.MapTypeId.HYBRID,
+        google.maps.MapTypeId.TERRAIN
+      ],
+      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU  
+      //
+    },
+        
+    scaleControl: true,
+    streetViewControl: true,
+    rotateControl: true,       
+    
+    overviewMapControl: true, 
+    overviewMapControlOptions: {
+      opened:true
+    },
+    
+    
+    mapTypeId:  google.maps.MapTypeId.ROADMAP //SATELLITE TERRAIN HYBRID ROADMAP
+  };
+  
+  
+  //-----------------------------------
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+  
+  addButtons(map);
+                                                                                 
+  //================================================
+  //dodatkowe markery
+  //marker
+  var imageURL = "https://assets.onestore.ms/cdnfiles/external/uhf/long/9a49a7e9d8e881327e81b9eb43dabc01de70a9bb/images/microsoft-gray.png";
+  var centerMarker = new google.maps.Marker({
+    icon: imageURL,
+    position: new google.maps.LatLng(54.549803,18.461634),
+    map:  map,
+    title: "To tutaj"
+  });
+   
+  //======================================================  
+  //polyline  
+  //np trasa przejazdu
+  var pathCoordinates = [
+    new google.maps.LatLng(54.549803,18.461634),
+    new google.maps.LatLng(54.549803-0.1,18.461634-0.1)
+  ];  
+  var pathToCenter = new google.maps.Polyline({
+    path: pathCoordinates,
+    strokeColor: '#0000FF',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+  pathToCenter.setMap(map);
+  
+  //======================================================
+  //polygon
+  //np park
+  var natureCoordinates = [
+    new google.maps.LatLng(54.549803,18.461634),
+    new google.maps.LatLng(54.549803,18.461634-0.0005),
+    new google.maps.LatLng(54.549803-0.0005,18.461634-0.0005),
+    new google.maps.LatLng(54.549803-0.0005,18.461634)
+  ];  
+  var natureArea = new google.maps.Polygon({
+    path: natureCoordinates,
+    strokeColor: '#FFFFFF',
+    strokeOpacity: 0.8,
+    strokeWeight: 2,   
+    fillColor: "#00FF00",
+    fillOpacity: 0.6,  
+    
+    //!!!!!!!!!!!!!!!
+    editable: true //wtedy mozna przesuwać punkty - edytowalny    
+  });
+  natureArea.setMap(map);
+  
+  //=========================================
+  //rectangle, circle
+  
+  //circle
+  var circle = new google.maps.Circle({
+    map: map,
+    center: new google.maps.LatLng(54.549003,18.460634),
+    fillColor: "#92D050",
+    fillOpacity: 0.6,
+    strokeColor: "#FF0000",
+    strokeOpacity: 0.8,
+    strokeWeight: 2
+  });
+  circle.setRadius(58); //metry  
+             
+  //rectangle
+  var bounds = new google.maps.LatLngBounds(
+    new google.maps.LatLng(54.551803-0.0005,18.461634-0.0005),
+    new google.maps.LatLng(54.551803,18.461634)
+    //jak zamienione koordynaty - opaska wokół ziemi !!!!
+  );
+  var rectangle = new google.maps.Rectangle({
+    bounds: bounds,
+    map: map,
+    fillColor: "#00FF00",
+    fillOpacity: 0.6,
+    strokeColor: "#FF0000",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    
+    //!!!!!!!!!!!!!!!!!
+    draggable: true //mozna przesuwać !!!!!!!
+    
+  });  
+  //================================================
+  
+  //overlays - mozna nałożyc na mapę jaki obrazek np historyczny
+  // create map tiles (MapTiler, GDAL2Tiles)
+  // compress map titel (PNGOUTWin)
+  // extend the OverlayView class 
+  
+  //film 13
+  
+  
+  
+  
+}//initialize
+
+function drawPolygon(map) {
+//......
+}
+
+function drawEditablePolygon(map) {
+//....
+}
+  
+//google.maps.eventaddDomListener(window,'load',initialize);
+
+  function addButtons(map) {
+  
+    document.getElementById('btnTerrain').addEventListener('click',function() {
+      map.setMapTypeId(google.maps.MapTypeId.TERRAIN)
+    });
+
+    document.getElementById('btnHybrid').addEventListener('click',function() {
+      map.setMapTypeId(google.maps.MapTypeId.HYBRID)
+    });
+
+  }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBnSg0_Ri9ExTi_ma683wd9cSuQEevjIk&callback=initialize"></script>
+
+<script>
+ //google.maps.eventaddDomListener(window,'load',initialize);
+</script>
+</script>
+
+
+
+</body>
+</html>

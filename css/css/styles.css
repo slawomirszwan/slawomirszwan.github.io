@@ -1,0 +1,150 @@
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+ outline:1px solid red;
+}
+
+section {
+  border: .5em solid green;
+  padding: 1em;
+  margin: 1em 0;
+  
+  overflow: auto;
+}
+
+/* --------------------------------------- */
+#s002 #tekst {
+  /*ograniczenie diva tylko do zajêtosci tekstu*/
+    display: inline-block;
+    font-size: 2.1em;
+    font-family: monospace;
+    background-color:white; 
+    
+/*    float:left;*/ 
+        
+    /*relacyjne elementy w nim moga byc pozycjonowane absolutnie*/
+    position:relative;
+} 
+
+/*sposob animacji*/
+/*
+@-moz-keyframes mymove {
+  from { width:100% }
+  to { width:0; }
+} 
+*/
+@keyframes mymove {
+  from { width:100% }
+  to { width:0%; }
+} 
+
+
+
+#s002 #tekst > span {
+  background-color:white;
+  
+  /*pozycjonowanie absolutne aby moc zas³aniaæ text*/
+  position:absolute;
+  top:0;
+  right:0;   /*przyklejony do koñca tekstu*/
+  height:100%; /*default*/ 
+  
+  /*width:100%;*/
+  
+  /*animacja*/
+/*  -moz-animation: mymove 10s linear infinitive;*/
+/*  animation: mymove 10s linear infinite;*/ 
+
+/*  
+  animation-delay: 1s; 
+  animation-direction: alternate;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+  animation-name: mymove;
+  animation-timing-function: linear; 
+  animation-fill-mode: none;    
+*/
+/*wraca do pierwotnego stanu*/  
+
+/* @keyframes duration | timing-function | delay | 
+iteration-count | direction | fill-mode | play-state | name */
+  animation: 10s steps(28,start) 1s 3 alternate none running mymove, kursor 1s step-end infinite;
+   
+  /*dodajemy migaj¹cy kursor*/
+  border-left:2px solid;
+
+}
+
+#s002 h1 {
+  font-size:3em;
+  font-family: monospace;
+}
+
+@keyframes kursor
+{
+  0% { border-left-color:transparent; }
+  50% { border-left-color:black; }
+  100% { border-left-color:transparent; }
+}
+
+/*====================================================*/
+#s003 #tekst {
+  font-size:2.1em;
+  font-family:cursive;
+  
+  width: 435px;
+  height:2.5em;
+  line-height:2.5em;
+  
+  margin: 0 auto;
+  border: 5px solid lime;
+  background-color:green;
+  overflow:hidden;
+}
+
+#s003 h1{
+  font-size:3em;
+  font-family:cursive;
+  color:green;
+}
+
+#s003 p.moving-text {
+  position:relative;
+  top:-33px;
+  white-space:nowrap; 
+                               
+  /*animacja*/
+  animation: neon 15s infinite;  
+  /*animation: nazwa duration funkcja_czasu delay iteration-count direction fill-mode play-state;*/
+}
+
+@keyframes neon {
+  0% {left:500px;} 
+/*napis pozostanie  
+  100% {left:0;}  */
+/*napis siê schowa*/
+  100% {left:-500px;} 
+}  
+/*===============================================*/
+    
+#s004 h1{
+  font-size:3em;
+  font-family:fantasy,arial;
+  color:navy;
+  background-color: #cccccc;
+} 
+  
+#s004 li {
+  font-size:2.1em;
+  font-family:fantasy,arial;
+  font-weight:bold;
+  background-color: #dddddd;
+}
+
+ol:hover {
+  transform: rotate(7deg);
+  
+  transform: matrix(1, -0.2, 0, 1, 0, 0);
+}

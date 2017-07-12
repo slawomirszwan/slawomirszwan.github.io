@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="iso-8859-2">
+  <title>Proste działania matematyczne</title>
+  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header> 
+    <img src="baner.jpg" alt="baner strony">    
+  </header>
+  <nav> 
+    <p>Menu</p>
+    <ul> 
+      <li><a href="strona1.html">proste działania</a></li>
+      <li><a href="strona2.html">potęgowanie</a></li>
+
+    </ul>
+  </nav>
+  <main>
+      <h1>PROSTE DZIAŁANIA</h1>
+	  
+	  <form>
+		<label>Podaj pierwsza liczbę:</label><input name="liczba1" id="liczba1"><br>
+		<label>Podaj drugą liczbę:</label><input name="liczba2" id="liczba2"><br>
+
+	  </form>
+	  	<button onclick="dodaj()">DODAWANIE</button>
+		<button onclick="odejmij()">ODEJMOWANIE</button>
+		<button onclick="pomnoz()">MNOŻENIE</button>
+		<button onclick="podziel()">DZIELENIE</button><br>
+		<span id="wynik"></span>
+  </main>
+  </footer>
+  </footer>
+  
+  <script>
+	var form= document.forms[0];
+	
+	//console.log(form);
+	
+	function sprawdzLiczby() {
+		var liczba1 = form.liczba1.value;
+		var liczba2 = form.liczba2.value;	
+		
+		console.log(liczba1,liczba2);
+		
+		if ((liczba1=="") || (liczba2=="")) {
+			alert("Proszę uzupełnić obie liczby");
+			return false;
+		}
+		return true;
+	}
+	
+	function sprawdzZero() {
+		var liczba2 = form.liczba2.value;	
+		
+		if (liczba2==0) {
+			alert("Nie wolno dzielić przez zero");
+			return false;
+		}
+		return true;		
+	}
+	
+	function dodaj() {
+		var liczba1 = form.liczba1.value;
+		var liczba2 = form.liczba2.value;	
+			
+		if (!sprawdzLiczby())
+			return;
+		var suma= parseInt(liczba1)+parseInt(liczba2);
+		
+		var span=document.getElementById("wynik");
+		span.innerHTML = "Suma wynosi: "+suma;
+	}
+	//==========================
+		function odejmij() {
+		var liczba1 = form.liczba1.value;
+		var liczba2 = form.liczba2.value;	
+			
+		if (!sprawdzLiczby())
+			return;
+		var suma= parseInt(liczba1)-parseInt(liczba2);
+		
+		var span=document.getElementById("wynik");
+		span.innerHTML = "Różnica wynosi: "+suma;
+	}
+	//==========================
+		function pomnoz() {
+		var liczba1 = form.liczba1.value;
+		var liczba2 = form.liczba2.value;	
+			
+		if (!sprawdzLiczby())
+			return;
+		var suma= parseInt(liczba1)*parseInt(liczba2);
+		
+		var span=document.getElementById("wynik");
+		span.innerHTML = "Mnożenie wynosi: "+suma;
+	}
+	//==========================
+		function podziel() {
+		var liczba1 = form.liczba1.value;
+		var liczba2 = form.liczba2.value;	
+			
+		if (!sprawdzLiczby())
+			return;
+		if (!sprawdzZero()) 
+			return;
+			
+		var suma= parseInt(liczba1)/parseInt(liczba2);
+		
+		var span=document.getElementById("wynik");
+		span.innerHTML = "Iloraz wynosi: "+suma;
+	}
+  </script>
+</body>
+</html>

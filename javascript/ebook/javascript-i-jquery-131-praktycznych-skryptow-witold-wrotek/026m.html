@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "
+-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<head>
+<title>026</title>
+<meta http-equiv="CONTENT-LANGUAGE" CONTENT="PL">
+<meta http-equiv="content-type" CONTENT="text/html; CHARSET=iso-8859-2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+</head><body><script>
+document.write("<h1>026</h1>");
+var tankers1 = ["Szarik", "Gustlik", "Grześ", "Janek", "Olgierd"];
+var tankers2 = ["Kugel", "Gustav", "Gregory", "John", "Leutnant"];
+
+document.write("<B>Tablica 1.</B><br>");
+for (i = 0; i < tankers1.length; i++) {
+document.write(tankers1[i])
+document.write(" ")
+}
+document.write("<p></p>")
+
+document.write("<B>Tablica 2.</B><br>");
+for (i = 0; i < tankers2.length; i++) {
+document.write(tankers2[i])
+document.write(" ")
+}
+document.write("<p></p>")
+
+var sojusz = tankers1.concat(tankers2);
+
+document.write("<B>Połączenie tablicy 1. i 2.</B><br>");
+for (i = 0; i < sojusz.length; i++) {
+document.write(sojusz[i])
+document.write(" ")
+}
+</script></body></html>

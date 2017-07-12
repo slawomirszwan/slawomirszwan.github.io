@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<head>
+<title>114</title>
+<meta http-equiv="CONTENT-LANGUAGE" CONTENT="PL">
+<meta http-equiv="content-type" CONTENT="text/html; CHARSET=iso-8859-2">
+
+<!-- dodanie jQuery do dokumentu -->
+<script src="D:\JQuery\jquery-1.11.1.js"></script>
+
+<!-- dodanie CSS do dokumentu -->
+<link rel="stylesheet" href="D:\JQuery\style.css">
+
+<script type="text/javascript">
+$(document).ready(function(){
+$('p').hide();
+$("button#but1").click(function(){ 
+$("p#odp1").slideToggle("slow"); 
+});
+$("button#but2").click(function(){ 
+$("p#odp2").slideToggle("slow"); 
+});
+$("button#but3").click(function(){ 
+$("p#odp3").slideToggle("slow"); 
+});
+});
+</script>
+</head>
+<body>
+<h1>114</h1>
+<button id="but1">Dowcip 1.</button>
+<p id="odp1">Jaka jest różnica między studentem informatyki z 1. i 5. roku?<br>
+- Student informatyki z 1. roku myśli, że 1 KB to 1000 bajtów.<br>
+- Student informatyki z 5. roku myśli, że kilometr to 1024 metry.</p>
+<button id="but2">Dowcip 2.</button>
+<p id="odp2">- Jaki jest zorientowany obiektowo sposób na zdobycie fortuny?<br>
+- Dziedziczenie.</p>
+<button id="but3">Dowcip 3.</button>
+<p id="odp3">Programista przyszedł do pracy na 8. Osiem godzin przy komputerze i o 16 podnosi się do wyjścia, na co zbulwersowany szef:<br>
+- Gdzie? O której to się wychodzi?<br>
+- Yyy, ale ja dzisiaj mam urlop.</p>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<script type="text/javascript"
+src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+czy jest sersor gps
+
+v=3
+wersja biblioteki
+-----------------
+// Create a new map that is immediately displayed on the web page
+var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 6,
+  center: new google.maps.LatLng(54, 12);
+  mapTypeId: google.maps.MapTypeId.ROADMAP,
+});
+
+// Create a marker and instantly add it to a map
+var marker = new google.maps.Marker({
+position: new google.maps.LatLng(54, 12),
+map: map
+});
+
+//----------------------------------------------------
+// Create the marker
+var marker = new google.maps.Marker({
+position: new google.maps.LatLng(54, 12)
+});
+// And add it to a map
+marker.setMap(map);
+
+//------------------------------------------------------
+//marker z ikoną
+var marker = new google.maps.Marker({
+position: new google.maps.LatLng(54, 12),
+map: map,
+icon: 'icon.png',
+shadow: 'shadow.png'
+});
+
+//http://code.google.com/p/enhancejs/
+
+//----------------------------------------------------
+var marker = new google.maps.Marker({
+position: new google.maps.LatLng(54, 12),
+map: map,
+icon: 'icon.png',
+shape: {
+type: 'poly',
+coord: [4,4, 29,4, 29,29, 22,29, 17,35, 16,35, 10,29, 4,29, 4,4]
+}
+});
+//----------------------------------------------------
+
+// Create a new InfoWindow object
+var infoWindow = new google.maps.InfoWindow({
+content: 'Some text'
+});
+// Add a click event to a marker
+google.maps.addListener(marker, 'click', function() {
+// Add the InfoWindow to the map
+infoWindow.open(map, marker);
+});
+
+//okienko po kliknięciu na marker
+
+//---------------------------------------------------------
+// Create an array with points
+var points = [
+new google.maps.LatLng(37.7671, -122.4206),
+new google.maps.LatLng(36.1131, -115.1763),
+new google.maps.LatLng(34.0485, -118.2568),
+];
+// Create a new polyline and instantly add it to the map
+var polyline = new google.maps.Polyline({
+path: points,
+strokeColor: '#ff0000',
+strokeWeight: 5
+strokeOpacity: 0.7,
+map: map
+});
+
+//------------------------------------------------------------------
+// Create an array with points
+var points = [
+new google.maps.LatLng(37.7671, -122.4206),
+new google.maps.LatLng(36.1131, -115.1763),
+new google.maps.LatLng(34.0485, -118.2568),
+];
+// Create a new polygon and instantly add it to the map
+var polyline = new google.maps.Polyline({
+path: points,
+strokeColor: '#ff0000',
+strokeWeight: 5
+strokeOpacity: 0.7,
+fillColor: '#ff0000',
+fillOpacity: 0.3,
+map: map
+});
+
+//------------------------------------------------------------------------
+
+ Events
+ var handle = google.maps.event.addListener(marker, 'click', function(e) {
+// Do something
+});
+
+var handle = google.maps.event.addListener(polyline, 'click', function(e) {
+var positionClicked = e.latLng;
+});
+
+wszystkie prarametry zwrócone przez event
+poza marker
+
+var handle = google.maps.event.addListener(marker, 'click', function(e) {
+var positionClicked = marker.getPosition();
+});
+
+google.maps.event.addListenerOnce(map, 'bounds_changed', function() {
+var bounds = map.getBounds();
+});
+
+http://validator.w3.org.
+
+
+
+
+
+
+

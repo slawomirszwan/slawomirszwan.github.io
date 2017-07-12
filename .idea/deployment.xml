@@ -2,13 +2,18 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
+<<<<<<< HEAD
       <paths name="blog">
+=======
+      <paths name="baza">
+>>>>>>> a94118978154759bded9d75c6acdf4e189c98f33
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
+<<<<<<< HEAD
       <paths name="rezerwacja">
         <serverdata>
           <mappings>
@@ -24,6 +29,9 @@
         </serverdata>
       </paths>
       <paths name="wordpress411">
+=======
+      <paths name="blogxml">
+>>>>>>> a94118978154759bded9d75c6acdf4e189c98f33
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

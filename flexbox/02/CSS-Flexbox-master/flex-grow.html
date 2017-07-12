@@ -1,0 +1,59 @@
+﻿<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Flexbox Sizing</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,800' rel='stylesheet' type='text/css'>
+<style>
+/*USING flex-grow*/
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: red;
+  display: flex;      /*sets those <h1>s inline*/
+}
+.title-1 {
+  background: yellow;
+  width: 200px;
+  flex-basis: 120px;
+  flex-grow: 1;      /*there is an extra space cuz 'flex-basis' of elements didnot fill the whole screen width → 'flex-grow' allows us to determine what to do with that extra space, i.e. 'flex-grow: 1' means that this specific element should expand its free space width to meet this ratio 1:0:0*/
+}
+.title-2 {
+  background: orange;
+  flex-basis: 40;
+  flex-grow: 2;      /*i.e. .title-2 should expand its free space width to meet the ratio 1:2:0*/
+}
+.title-3 {
+  background: green;
+  flex-basis: 10px;
+  flex-grow: 3;      /*i.e. .title-3 should expand its free space width to meet the ratio 1:2:3*/  
+}
+
+/*-------------------------*/
+/*USING flex-shrink*/
+/*body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: red;
+  display: flex;      
+}
+.title-1 {
+  background: yellow;
+  width: 200px;
+  flex-basis: 200px;
+  flex-shrink: 3;      /*This element will shrink 3times as others*\/
+}
+.title-2 {
+  background: orange;
+  flex-basis: 200px;  
+}
+.title-3 {
+  background: green;
+  flex-basis: 200px;  
+}*/
+</style>
+</head>
+<body>
+  <h1 class="title-1">Gary</h1>
+  <h1 class="title-2">is</h1>
+  <h1 class="title-3">Retard</h1>
+</body>

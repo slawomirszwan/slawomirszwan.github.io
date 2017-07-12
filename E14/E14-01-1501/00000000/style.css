@@ -1,0 +1,53 @@
+
+
+html {
+	background-color: grey;
+	padding:0;
+}	
+
+
+
+body {
+	width: 800px;
+	margin: 0 auto;
+	padding:0;
+}	
+
+header {
+	background-color:red;
+	height: 100px;
+}
+
+img {
+	margin:0;
+}
+
+nav {
+	float: left;
+	width: 30%;
+	
+	background-color: lightgreen;
+	background: linear-gradient(red,yellow);
+	height:500px;
+	
+
+}	
+
+main {
+	width:70%;
+	float:right;
+	background-color: white;
+	background: linear-gradient(white,gray);
+	height: 500px;
+	
+
+
+}
+
+footer {
+	height: 100px;
+	background: linear-gradient(white,grey);
+	
+	clear:both;
+
+}	

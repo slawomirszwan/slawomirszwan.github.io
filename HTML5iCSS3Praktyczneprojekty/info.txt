@@ -1,0 +1,480 @@
+ranking.pl
+http://ranking.pl/pl/rankings/web-browsers.html
+
+
+http://html5.gajdaw.pl/projekty-html/index.html
+http://html5.gajdaw.pl/rysunki-html/index.html
+http://html5.gajdaw.pl/
+
+http://html5.gajdaw.pl/listingi-html/index.html
+http://html5.gajdaw.pl/cwiczenia-html/index.html
+
+http://en.wikipedia.org/wiki/Usage_share_of_web_browsers
+http://gs.statcounter.com
+
+testowanie stron
+http://validator.w3.org
+http://jigsaw.w3.org/css-validator/
+
+
+Style
+Firefox - Widok/Styl strony/Ignoruj style
+
+markup
+markdown
+
+Znaczniki
+strong
+em
+sup
+
+========================================
+lp.
+l.
+2.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+Funkcja
+Komentarze
+Typ dokumentu
+Element główny
+Metadane
+Skrypty
+Sekcje
+Grupowanie treści
+Elementy
+<!-- --> 􀀙·
+􀀚f(> html '􀀯
+DOCTYPE
+head, title,bas􀀒􀀮,
+,
+meta, style
+scri pt, nosc􀀑 body, ar􀀘, section, nav,aside, hl, h2, h3, h4, h5,
+h6, hg􀀐 header, footer, address
+liczba
+6
+2
+15
+8,(.􀀰, pł'e, blockquote, ol, ul, li, dl,d t, dd, figure, 13 􀀭ption,div
+Elementy
+.
+dotyczące 􀀗a, em, strong, smal l, s, ci te, q, dfn, abbr, t i me, code,
+semantyki tekstu A.\... var, samp, kbd, sub,s u p, i, b, u,m ark, ruby, rt, rp,b di,
+28
+􀀾 bdo, span, br, wbr
+Zmiany w dokumencie
+Osadzanie
+Tabele
+Formularze
+Elementy interaktywne
+ins, del 2
+img, iframe,embed,object, param, video, audio, 14
+source, track, canvas,map,area,math, svg
+table, caption,colgroup, col, tbody, thead, tfoot, 10
+tr, td, th
+form, fi e l d set, legend, l a be l, i nput, but ton, s e l ect, 15
+datalist,optgroup,option, textarea, keygen,output,
+progress,meter
+details,command, summary,menu
+RAZEM
+4
+112
+=============================================
+<!DOCTYPE html >
+<html>
+<head>
+<title>tytuł</title>
+<meta charset="UTF-8" />
+</head>
+<body>
+</body>
+</html >
+
+
+
+http://dev.w3.org/html5/spec/
+
+
+<br>
+<br/>
+
+Elementami pustymi w języku HTML5 są: area, base, br, button, col, command, embed,
+hr, img, input, keygen, link, meta, param, source, track, wbr. Wszystkie pozostałe
+elementy są niepuste, a więc mają znaczniki zamykające.
+
+
+character references entities
+&lt; <
+&gt;  >
+
+&#60; <  dziesiętnie
+&#x3c; <  hex
+
+unikode
+&#x0429 - ruska bukwa
+
+rozróżnia wielkoć liter
+
+wprowadzanie 
+lewy ALT + wpisać kod z klawiatury numerycznej , puscić lewy alt
+
+http://dev.w3.org/html5/htmlauthor/charref
+
+http://www.unicode.org/charts/
+
+
+&amp;
+&copy;
+&nbsp;
+&shy; opcjonalny łącznik
+&apos
+&mdash; myslnik
+
+&quot
+&bdquo; ""
+&rdquo;
+
+&hellip ...
+
+strzałki
+&larr;
+&uarr;
+&rarr;
+&darr;
+
+=======================================================
+atrybuty znaczników
+
+class="sssss"
+
+
+atrybuty logiczne
+------------------------------------------
+artybut="true"
+atrybut="false"
+artybut="0"
+atrybut="000"
+
+to wszystko i takt atrybut - true
+
+<znacznik atrybut="atrybut">
+<znacznik atrybut>
+
+jedyne ustawienie na false to pominiecie atrybutu
+!!!!!!!!!!!!!!!!!!
+
+------------------------------
+komentarz
+
+<!-- -->
+
+nie można zagnieżdzać
+nie może być wewnatrz znacznika
+
+=======================================================================================================
+ąćęłńóśźż
+ĄĆĘŁŃÓŚŹŻ
+
+
+<p>kąt, ćma, pręgierz, wątły, koń, ósmy, świnia, źdźbło, żółw</p>
+
+zażółć gęŚlą jaźń
+Mężny bądź, chroń pułk twój i sześć flag.
+http://en.wikipedia.org/wiki/Pangram
+
+kodowanie znaków polskich
+
+iso-8859-2   -> latin2 , iso-latin2
+windows-1250
+utf-8
+
+
+
+Kody polskich znaków diakrytycznych
+iso-8859-2 windows-1250 utf-8 unikod
+Znak
+dec hex dec hex hex dec Hex
+ą 177 b1 185 b9 c485 261 0105
+ć 230 e6 230 e6 c487 263 0107
+ę 234 ea 234 ea c499 281 0119
+ł 179 b3 179 b3 c582 322 0142
+ń 241 f1 241 f1 c584 324 0144
+ó 243 f3 243 f3 c3b3 243 00f3
+ś 182 b6 156 9c c59b 347 015b
+ź 188 bc 159 9f c5ba 378 017a
+ż 191 bf 191 bf c5bc 380 017c
+Ą 161 a1 165 a5 c484 260 0104
+Ć 198 c6 198 c6 c486 262 0106
+Ę 202 ca 202 ca c498 280 0118
+Ł 163 a3 163 a3 c581 321 0141
+Ń 209 d1 209 d1 c583 323 0143
+Ó 211 d3 211 d3 c393 211 00d3
+Ś 166 a6 140 8c c59a 346 015a
+Ź 172 ac 143 8f c5b9 377 0179
+Ż 175 af 175 af c5bb 379 017b
+
+http://pl.wikipedia.org/wiki/Kodowanie_polskich_znaków
+
+
+kodowanie windows-1250 i iso-8859-2 rózni się tylko 6 literami
+ą s ź Ą Ś Ź
+pozostałe takie same
+
+
+=============================
+<meta charset="iso-8859-2" />
+
+
+jest też content-type ale tylko dla plików z serwera nie działa to gdy obczyt
+
+
+<html lang="p">
+
+
+http://www.loc.gov/standards/iso639-2/php/code_list.php
+
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<title></title>
+<meta charset="iso-8859-2" />
+</head>
+<body>
+</body>
+</html>
+
+
+-------------------------------
+tryby pracy przeglądarki
+
+quirks mode
+standard mode
+
+
+Czyli wyglad zalezy od:
+*rodzaju przegladarki
+*wersji przegladarki
+*trybu pracy
+
+tryb pracy !!!!
+
+=====================================
+sprawdzenie trybu przegladarki
+
+alert(document.compatMode)
+
+document.compatMode
+"CSS1Compat"
+oraz 
+"BackCompat"
+
+
+Firefox : Narzedzia / informacje o stronie
+Tryb wyswietlania: Tryb standardów
+
+
+wybór trybu pracy:
+*Doctype  (doctype switching, doctype sniffing)
+*brak doctype - wsteczna compat
+
+w IE jest emulowanie konkretnej wersji
+<meta http-equiv="x-ua-compatible" content="IE=5" />
+<meta http-equiv="x-ua-compatible" content="IE=7" />
+
+ <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+ 
+ 
+ https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx
+ 
+ 
+ &lt; — znak mniejszości (<)
+&gt; — znak większości (>)
+&mdash; — myślnik (—)
+&ndash; — półpauza (–)
+&bdquo; — znak otwierający cudzysłów („)
+&rdquo; — znak zamykający cudzysłów (”)
+&nbsp; — twarda spacja
+&shy; — łącznik opcjonalny
+&times; — iloczyn kartezjański
+&rarr; — strzałka w prawo
+
+p — akapit tekstu
+br — złamanie wiersza
+h1, h2, h3, h4, h5, h6 — nagłówki
+em, strong — wyróżnianie tekstu
+
+W specyfikacji CSS Text Module Level 3, która jest dostępna pod adresem:
+http://www.w3.org/TR/css3-text/
+
+==================================================
+Dzielenie wyrazów
+kra&shy;ta
+trans&shy;for&shy;ma&shy;tor
+
+
+Zakaz łamania wierszy
+spójniki na końcu zdania
+twarda spacja
+
+...w połowie lipca w&nbsp;Krakowie odbywa się...
+
+
+&nbsp; nie jest do odstepu
+text-intend, margin, padding
+
+ispacja -> i&nbsp;
+
+Złamanie wiersza
+<br/>
+
+myslnik &mdash;
+półpausa &ndash;
+
+&hellip; ...
+
+&bdquo;
+&rdquo;
+&quo;
+
+
+przy utf-8 mozna wpisaywać od razu
+klawiatura numeryczna
+lewy Alt
+8212 myslnik
+8211 półpauza
+8222 otwarcie cudzysłowu
+8221 zamknięcie cudzysłowu
+8230 wielokropek
+
+------------------------------
+automatyczne numerowanie
+:before
+:after
+
+
+em kursywa
+strong wyróznienie
+
+
+&copy; ©
+&times; ×
+&rarr; →
+
+&uarr; — strzałka w górę
+&darr; — strzałka w dół
+&larr; — strzałka w lewo
+
+=================================================================
+=================================================================
+=================================================================
+<link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+nie ujmować stylów w komentarz html !!!!!!!!!!!
+
+font-family: Verdana, sans-serif;
+font-size: 120%;
+
+
+font-family: Arial, Verdana, sans-serif;
+font-size: 200%;  medium, 18px
+font-style: italic;
+font-weight:  bold;
+
+
+line-height: 32px; 120%;
+
+text-align: center;
+margin
+padding
+
+
+color
+background-color
+
+
+kolory systemowe
+ButtonText
+ScrollBar
+
+rgb(255,120,85)
+
+#ff035c
+
+border  color style width
+solid
+dashed
+
+ font-family — krój czcionki
+font-size — wielkość czcionki
+font-style — kursywa
+font-weight — grubość czcionki
+line-height — wysokość wiersza
+text-align — poziome wyrównanie tekstu
+margin — margines (z czterech stron)
+margin-top — margines górny
+margin-right — margines prawy
+margin-bottom — margines dolny
+margin-left — margines lewy
+color — kolor tekstu
+background — kolor tła
+border-color — kolor obramowania (z czterech stron)
+border-style — rodzaj obramowania (z czterech stron)
+border-width — grubość obramowania (z czterech stron)
+border — obramowanie (kolor, rodzaj i grubość z czterech stron)
+border-left-color — kolor obramowania z lewej strony
+border-left-style — rodzaj obramowania z lewej strony
+border-left-width — grubość obramowania z lewej strony
+border-left — lewe obramowanie (kolor, rodzaj, grubość)
+
+
+=================================================================
+klasy
+
+litera
+cyfry, - _ :.
+duże i małe litery rozróżniane
+
+pkt:5.2
+menu:poz1
+
+--------------------------------------------
+id
+
+litera litera cyfra :_.-
+
+============================================
+akapity p,
+􀂍 znaki złamania wiersza br, wbr,
+􀂍 tekst preformatowany pre,
+􀂍 elementy uwypuklające: em, mark, strong,
+􀂍 elementy frazowe: abbr, cite, code, dfn, kbd, samp, time, var,
+􀂍 elementy prezentacyjne: b, i, s, small, sub, sup, u,
+􀂍 cytaty q i blockquote,
+􀂍 elementy dotyczące języków Dalekiego Wschodu1: ruby, rt, rp, bdi, bdo.
+
+
+
+Elementów p nie wolno umieszczać m.in. w elementach:
+p
+pre
+em, strong
+ebbr, cite
+q
+
+
+

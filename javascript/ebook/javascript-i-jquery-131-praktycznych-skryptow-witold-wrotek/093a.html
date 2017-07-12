@@ -1,0 +1,32 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<head>
+<title>093</title>
+<meta http-equiv="CONTENT-LANGUAGE" CONTENT="PL">
+<meta http-equiv="content-type" CONTENT="text/html; CHARSET=iso-8859-2">
+
+<!-- dodanie jQuery do dokumentu -->
+<script src="D:\JQuery\jquery-1.11.1.js"></script>
+
+<!-- dodanie CSS do dokumentu -->
+<link rel="stylesheet" href="D:\JQuery\style.css">
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+document.write ("Tekst z znacznikami zawarty na stronie: " + $("p").html())
+
+  
+});
+</script>
+</head>
+<body>
+<h1>093</h1>
+<p>To jest tekst z <b>pogrubieniem</b>, <u>podkreśleniem</u> oraz <i>pochyleniem</i>.<br>
+To jest nowy wiersz, ale w tym samym akapicie.<br>
+To jest czcionka <font color="red">czerwona</font>, <font color="green">zielona</font> i <font color="blue">niebieska</font>.
+</p>
+<button id="przycisk">Tekst z znacznikami</button>
+
+</body></html>

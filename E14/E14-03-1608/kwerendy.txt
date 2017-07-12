@@ -1,0 +1,15 @@
+  – zapytanie 1: liczące ilość rekordów w tabeli sportowiec,
+ SELECT count(*) FROM `sportowiec` ;
+ 
+ – zapytanie 2: wybierające imię i nazwisko sportowca o id=1,
+ SELECT imie,nazwisko FROM `sportowiec` Where id=1;
+ 
+ – zapytanie 3: liczące średni wynik z dyscypliny rzut oszczepem dla sportowca o id=1,
+ SELECT avg(wynik )
+FROM `wyniki` 
+WHERE sportowiec_id=1 and dyscyplina_id=3;
+
+ – zapytanie 4: wybierające najlepszy wynik dla dyscypliny rzut oszczepem;
+ SELECT max(wynik )
+FROM `wyniki` 
+WHERE  dyscyplina_id=3

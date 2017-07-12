@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <title>Document</title>                                           
+  
+  <style>
+    html { height:100%;}
+    body { height:100%; margin:0; padding:0;}
+    #googleMap { height:400px; width:100%;}
+  </style>
+</head>
+<body>
+<!--
+mark lewin
+appswithmaps.net
+
+geografy 101
+get API key
+
+mapa nie jest sferą
+
+code.google.com/apis/console
+google.maps. javascript API v3
+ 
+-->
+<hr>
+<div id="googleMap" ></div>
+
+<button id="btnTerrain">show Terrain</button>
+<button id="btnHybrid">show Hybrid</button>
+<script>
+/*
+//http://appswithmaps.net/gmaps/latlngfinder
+//var mapOptions = { center: new google.maps.LatLng(54.549803,18.461634), zoom: 16 };
+https://marklewin.github.io/gmaps/latlongfinder/index.html
+
+*/
+function initialize() {
+
+  var mapOptions = { 
+    center: new google.maps.LatLng(54.549803,18.461634), 
+    zoom: 16,                                           
+    
+    //disableDefaultUI: true,
+    
+    zoomControl: true, 
+    zoomControlOptions: {
+      style: google.maps.ZoomControlStyle.SMALL,
+      position: google.maps.ControlPosition.BOTTOM_LEFT
+    },
+    
+    panControl: true, 
+    
+    mapTypeControl: true, 
+    mapTypeControlOptions: {
+      mapTypeIds: [
+        google.maps.MapTypeId.ROADMAP,
+        google.maps.MapTypeId.HYBRID,
+        google.maps.MapTypeId.TERRAIN
+      ],
+      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU  
+      //
+    },
+        
+    scaleControl: true,
+    streetViewControl: true,
+    rotateControl: true,       
+    
+    overviewMapControl: true, 
+    overviewMapControlOptions: {
+      opened:true
+    },
+    
+    
+    mapTypeId:  google.maps.MapTypeId.ROADMAP //SATELLITE TERRAIN HYBRID ROADMAP
+  };
+
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+  
+  addButtons(map);
+
+}
+
+  
+//google.maps.eventaddDomListener(window,'load',initialize);
+
+  function addButtons(map) {
+  
+    document.getElementById('btnTerrain').addEventListener('click',function() {
+      map.setMapTypeId(google.maps.MapTypeId.TERRAIN)
+    });
+
+    document.getElementById('btnHybrid').addEventListener('click',function() {
+      map.setMapTypeId(google.maps.MapTypeId.HYBRID)
+    });
+
+  }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBnSg0_Ri9ExTi_ma683wd9cSuQEevjIk&callback=initialize"></script>
+
+<script>
+ //google.maps.eventaddDomListener(window,'load',initialize);
+</script>
+</script>
+
+
+
+</body>
+</html>

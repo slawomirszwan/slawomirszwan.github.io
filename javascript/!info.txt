@@ -1,0 +1,26 @@
+Javascript:
+
+kapsułkowanie
+agregacja
+dziedziczenie
+polimorfizm
+
+--------------------------
+JS nie ma pojęcia klas
+
+Type:
+*proste
+*referencje
+
+proste przechowują w obiekcie wartoć
+referencyjne przechowują wskaźnik do obiektu
+
+----------------------------
+typy proste:
+boolean (true false)
+number
+null
+undefined
+
+----------------------------
+

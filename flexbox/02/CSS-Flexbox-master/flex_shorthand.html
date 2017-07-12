@@ -1,0 +1,55 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Flexbox Sizing</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,800' rel='stylesheet' type='text/css'>
+  <style>
+/*!!! In the shorthand notation default settings of flex-grow and flex-basis are different from that in the normal notation !!!*/
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: red;
+  display: flex;
+}
+.title-1 {
+  background: yellow;
+  flex: 1;      /*flex-grow:1; flex-shrink:1; flex-basis:0*/
+}
+.title-2 {
+  background: orange;
+  flex: 20px;      /*flex-grow:1; flex-shrink:1; flex-basis:20px*/
+}
+.title-3 {
+  background: green;
+  flex: 0 80px;      /*flex-grow:0; flex-shrink:1; flex-basis:80px*/
+}
+
+/*--------------------------*/
+/*This will make all the children to use the same size space (see line 40)*/
+/*
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: red;
+  display: flex;
+}
+.title-1 {
+  background: yellow;     
+}
+.title-2 {
+  background: orange;     
+}
+.title-3 {
+  background: green;      
+}
+h1 {
+ flex: 1;
+}
+
+  </style>
+</head>
+<body>
+  <h1 class="title-1">Gary</h1>
+  <h1 class="title-2">is</h1>
+  <h1 class="title-3">Retard</h1>
+</body>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<head>
+<title>064</title>
+<meta http-equiv="CONTENT-LANGUAGE" CONTENT="PL">
+<meta http-equiv="content-type" CONTENT="text/html; CHARSET=iso-8859-2">
+
+<!-- dodanie jQuery do dokumentu -->
+<script src="D:\JQuery\jquery-1.11.1.js"></script>
+
+<!-- Kod Javascript: -->
+<script type="text/javascript">
+
+document.write ("<h1>064</h1>")
+document.write ("<h2>Menu</h2>")
+$(document).ready(function(){
+  $("button").click(function(){
+   $("ul li:first-child").hide();
+    $(this).hide();
+  });
+});
+</script>
+</head>
+<body>
+<p>Przystawki</p>
+<ul>
+  <li>Ser kozi z szałwią - Polecamy!!!</li>
+  <li>Figa z serem kozim i orzechami piniowymi</li>
+  <li>Pomidory z bazylią i serem kozim</li>
+</ul>
+
+<p>Dania ciepłe</p>
+<ul>
+  <li>Pierogi z serem, szpinakiem i szałwią</li>
+  <li>Zupa krem z fasoli z suszonymi śliwkami</li>
+  <li>Brązowy ryż świezymi figami i syropem klonowym</li>
+</ul>
+
+<p>Desery</p>
+<ul>
+  <li>Lody waniliowe z szałwią i syropem klonowym</li>
+  <li>Owoce leśne z bitą śmietaną</li>
+  <li>Owoce sezonowe w galarecie</li>
+</ul>
+<button>Usuń dania z szałwią</button>
+</body>
+</html>

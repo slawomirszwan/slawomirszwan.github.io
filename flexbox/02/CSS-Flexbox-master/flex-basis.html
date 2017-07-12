@@ -1,0 +1,30 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Flexbox Sizing</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,800' rel='stylesheet' type='text/css'>
+  <style>
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: red;
+  display: flex;      /*sets those <h1>s inline*/
+}
+.title-1 {
+  background: yellow;
+  width: 200px;
+  flex-basis: 160px;      /*'flex-basis' will override 'width'. Default settings is 'auto' i.e. it depends on the width of element's content.*/
+}
+.title-2 {
+  background: orange;
+}
+.title-3 {
+  background: green;
+}
+  </style>
+</head>
+<body>
+  <h1 class="title-1">Gary</h1>
+  <h1 class="title-2">is</h1>
+  <h1 class="title-3">Retard</h1>
+</body>

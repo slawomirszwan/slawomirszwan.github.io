@@ -1,0 +1,1 @@
+document.write("Tekst 1., Tekst 2., Tekst 3.")
