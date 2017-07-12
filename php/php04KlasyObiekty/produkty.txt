@@ -1,0 +1,10 @@
+Bigos;10.5
+Golonka;14.3
+Schabowy;9.5
+Mielone;7.5
+deVolay;11.5
+Karkówka;12.5
+Ołówek;1.1
+Drukarka;450
+Telefon;879.99
+Suszarka do włosów;49.99

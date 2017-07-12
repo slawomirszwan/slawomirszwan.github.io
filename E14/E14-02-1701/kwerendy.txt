@@ -1,0 +1,11 @@
+﻿   – zapytanie 1: wybierające z tabeli Samochody jedynie pola id, model i kolor dla tych rekordów, dla których marka to Toyota oraz rocznik to 2014,
+   SELECT `id`,`model`,`kolor` FROM `samochody` WHERE `marka`='Toyota' and `rocznik`=2014 ;
+   
+   – zapytanie 2: wybierające z tabeli Samochody jedynie pola id, marka, model, rocznik dla wszystkich rekordõw tabeli,
+   SELECT `id`,`marka`,`model` FROM `samochody`;
+   
+   – zapytanie 3: korzystające z relacji łączącej tabele i wybierające id samochodu, jego model oraz telefon dla rekordów będących w relacji;
+   select samochody.id, samochody.model, zamowienia.telefon from samochody inner join zamowienia on zamowienia.samochody_id=samochody.id 
+   
+   
+   

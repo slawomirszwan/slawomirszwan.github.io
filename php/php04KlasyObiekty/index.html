@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <!-- Nagłówek strony -->
+    <head>
+        <!-- tytuł dokumentu-->
+        <title>Tworzenie szablonu dokumentu</title>
+        <!-- Strona używa kodowania UTF-8 -->
+        <meta charset="UTF-8">
+        <!-- Strona wspiera urządzenia mobilne-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <!-- Opis zawartości strony -->
+        <meta name="description" content="Tworzenie szablonu strony">        
+        <!-- Słowa kluczowe dla wyszukiwarek -->
+        <meta name="keywords" content="HTML5, CSS, Template">        
+        <!-- Informacja o autorze strony -->
+        <meta name="author" content="Leszek Słowikowski">
+        <!-- Zdefiniowane style zewnętrzne -->
+        <link rel="Stylesheet" type="text/css" href="css/nav_footer.css" />
+        <link rel="icon" href="img/icon.jpg">
+        </head>
+        <!-- Nagłówek strony -->
+        <!-- Sekcja body -->
+        <body>
+            <!-- Menu nawigacyjne -->
+            <nav>
+                <!-- Pozycje menu nawigacyjnego -->    
+                <ul id="menu">
+                    <li><a href="#">Start</a></li>
+                    <li>
+                        <a href="#">Przykłady</a>
+                        <!-- Pozycje rozwijalne menu nawigacyjnego -->
+                        <ul>
+                            <li><a href="przyklad07.html">Przykład 07</a></li>
+                            <li><a href="przyklad08.html">Przykład 08</a></li>
+                            <li><a href="dodajmenu.html">Dodaj do menu </a></li>                            
+                        </ul>
+                        <!-- Pozycje rozwijalne menu nawigacyjnego -->
+                    </li>            
+                    <li>
+                        <a href="#">Zadania</a>
+                        <!-- Pozycje rozwijalne menu nawigacyjnego -->
+                        <ul>
+                            <li><a href="#">Zadanie 01</a></li>
+                            <li><a href="#">Zadanie 02</a></li>
+                            <li><a href="#">Zadanie 03</a></li>
+                            <li><a href="#">Zadanie 04</a></li>
+                        </ul>
+                        <!-- Pozycje rozwijalne menu nawigacyjnego -->
+                    </li>
+                    <li><a href="#">Pomoc</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+                <!-- Pozycje menu nawigacyjnego --> 
+            </nav>    
+            <!-- Menu nawigacyjne -->
+            <!-- Główna zawartość strony --> 
+            <main class="content">            
+                W PHP deklarujemy je słowem kluczowym class, po którym podajemy 
+                jej unikatową nazwę. Zasady jej tworzenia są podobne, jak 
+                w przypadku nazw zmiennych, tj. nie mogą one zaczynać się 
+                od cyfry. Następnie w nawiasach klamrowych umieszczamy 
+                informacje o dozwolonych polach oraz metodach, 
+                jakie klasa będzie posiadać:<br>
+                <pre>
+                class NazwaKlasy
+                {
+                    public $atrybutl;
+                    public $atrybut2;
+                    function metodal (){
+                        instrukcja1;
+                        instrukcja2;
+                        ...
+                        instrukcjaN;
+                    }
+                    function metoda2( $paraml, $param2){
+                        instrukcja1;
+                        instrukcja2;
+                        ...
+                        instrukcjaN;
+                    }
+                }    
+                </pre>
+                Na podstawie zadeklarowanej k1asy można stworzyć obiekt czyli 
+                egzemplarz klasy. Obiekt tworzy się, stosując słowo k1uczowe 
+                new: <br>
+                <pre>
+                $obiekt = new NazwaKlasy();
+                 </pre>
+                Dla każdej klasy możemy zdefiniować specjalną metodę, zwaną 
+                konstruktorem. Konstruktor jest wywoływany przy tworzeniu 
+                obiektu, może więc wykonywać przydatną inicjalizację zadań, 
+                takich jak nadanie atrybutom początkowych wartości.<br>
+                Konstruktor jest deklarowany w taki sam sposób jak inne operacje, 
+                ale posiada specjalną nazwę _construct(). Jego zadaniem jest 
+                automatyczne wywołanie podczas tworzenia obiektu. Deklaracja 
+                konstruktora może wyglądać następująco:
+                <pre>
+                class NazwaKlasy
+                {
+                    public $atrybutl;
+                    public $atrybut2;
+                    function __construct($nowaWartosc1, $nowaWartosc2){
+                        $atrybutl = $nowaWartosc1;
+                        $atrybut2 = $nowaWartosc2;
+                    }
+                    function metodal (){
+                        instrukcja1;
+                        instrukcja2;
+                        ...
+                        instrukcjaN;
+                    }
+                    function metoda2( $paraml, $param2){
+                        instrukcja1;
+                        instrukcja2;
+                        ...
+                        instrukcjaN;
+                    }
+                }    
+                </pre>
+                W przeciwieństwie do funkcji i programowania strukturalnego, 
+                klasy posiadają precyzyjne mechanizmy kontroli dostępu do 
+                swojego wnętrza. Proces ukrywania części funkcjonalności przed 
+                programistą nosi nazwę <b>hermetyzacji</b> i pomaga zwiększyć 
+                niezawodność oprogramowania. Tworząc klasę, będziemy zawsze 
+                starali się określić tzw. publiczny interfejs, z którego może 
+                korzystać programista, odwołując się do tworzonych obiektów, 
+                jednocześnie ukrywając wszystkie wewnętrzne aspekty działania 
+                klasy. Interpreter będzie pilnował, aby użytkownicy nie wywołali
+                żadnej "wewnętrznej" metody, co mogłoby doprowadzić do błędów 
+                w działaniu lub użycia jej niezgodnie z przeznaczeniem.<br>
+                Modyfikatorami dostępu są:
+                <ul>
+                    <li>
+                        <strong>public</strong> - atrybuty lub metody opisane 
+                        tym modyfikatorem są widoczne na zewnątrz obiektu i mogą
+                        być modyfikowane w dowolnym miejscu kodu, zarówno 
+                        wewnątrz klasy, wewnątrz klas potomnych oraz w obiekcie 
+                        utworzonym na podstawie klasy
+                    </li>
+                    <li>
+                        <strong>protected</strong> - atrybuty lub metody opisane 
+                        tym modyfikatorem są widoczne tylko wewnątrz klasy i klas 
+                        potomnych. Mogą być modyfikowane jedynie wewnątrz klasy, 
+                        wewnątrz klas potomnych. Nie są widoczne  w obiekcie 
+                        utworzonym na podstawie klasy.
+                    </li>
+                    <li>
+                        <strong>private</strong> - atrybuty lub metody opisane 
+                        tym modyfikatorem są widoczne tylko wewnątrz klasy, 
+                        w której zostały zdefiniowane i tylko w niej mogą być.
+                        modyfikowane. Nie są widoczne ani wewnątrz klas potomnych 
+                        ani w obiekcie utworzonym na podstawie klasy.
+                    </li>
+                </ul>
+                <br>
+                <br>
+                <br>
+            </main>
+            <!-- Główna zawartość strony --> 
+            <!-- Stopka --> 
+            <footer>
+                <p>
+                    CKU Sopot 2017 Kurs E14
+                </p>
+            </footer>
+            <!-- Stopka --> 
+        </body>
+        <!-- Sekcja body -->
+    </html>

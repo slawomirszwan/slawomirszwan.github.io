@@ -1,0 +1,63 @@
+.pf-container {
+  display:flex;
+}
+ 
+.pf-content {
+  padding: 3vw;
+} 
+    
+.pf-grid-item {
+  margin-bottom: 1rem;
+}
+
+.pf-grid-item:last-child {
+  margin-bottom:0;
+}
+
+/*small screen*/
+@media only screen and (max-width: 900px) {
+   .pf-container {
+     flex-direction: column;
+   } 
+   
+   .pf-sidebar {
+     display:flex;
+     flex-direction:column;
+     justify-content: center;
+     align-items:center;
+     text-align:center;
+   }
+
+
+}
+
+/* ---------------------------------------- */
+/*large screen*/
+@media only screen and (min-width: 901px) {
+   .pf-sidebar {
+     flex: 35vw;     
+     
+     position:fixed;  
+     height:100vh; 
+     width:35vw;
+     
+   } 
+   .pf-sidebar-container {
+     flex:35vw;
+   }
+   
+   .pf-content{
+      flex: 65vw;
+   }   
+   
+   .pf-grid {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content:space-between; 
+     
+   } 
+   
+   .pf-grid-item {
+     width:49%;
+   }
+}

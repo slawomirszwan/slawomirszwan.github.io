@@ -1,0 +1,35 @@
+﻿ 
+ 
+ #baner {
+	background-color: #9A6000;
+	color:white;
+	forn-size:180%;
+	text-align:center;
+	padding:20px;
+ }
+ 
+ #lewy {
+	width:60%;
+float:left;
+
+background: linear-gradient(to left top,grey,green);
+
+ }
+ 
+ #prawy {
+	background-color:#C47A00;
+	color:white;
+	width:40%;
+	height:100vh;
+	float:right;
+	
+ }
+ 
+ h3 {
+	text-align:center;
+	
+ }
+ 
+ ul  li {
+	margin:10px;
+ }

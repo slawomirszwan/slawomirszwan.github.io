@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON and Ajax</title>
+</head>
+<body>
+   <p>https://www.youtube.com/watch?v=rJesac0_Ftw</p>  
+   <p>JavaScript Object Notation</p>
+   <p>
+   number, 
+   string unicode podwójne cudzysłowy
+   boolean true false
+   array  0 lub wiecej
+   object key value
+   null empty value    
+   </p> 
+   Booleans Arrays Strings Objects Numbers Null
+   <hr /> 
+
+   <p>
+   {"name":"brad"} 
+   
+   .json
+   mime application/json   
+   
+   "children":["Brianna","Nicholas"],
+   age:5
+   </p>  
+   
+   <p>
+   https://jsonlint.com/
+   </p> 
+   <p>
+   https://jsonformatter.org/
+   https://github.com/getify/You-Dont-Know-JS
+   </p>
+   <ul id="people">
+       
+   </ul>
+   
+   <script type="text/javascript">
+   
+   var person = {
+    name: "Brad",
+    age:35,
+    email: function(){ 
+      return 'brad@gmail.com';
+    },
+    address: {
+      street: "5 main st",
+      city: "Boston"
+    },
+    children: ["Brianna","Nicholas"]
+   };  //object - not json         
+   
+   console.log(person); 
+   console.log(person.name);
+   
+   //json
+   var myJSON = JSON.stringify(person); 
+   console.log(myJSON);   
+   
+   
+   var obj = JSON.parse(myJSON);
+     
+   
+   
+   var people = [
+     {
+     name:"Brad",
+     age:35
+     },
+     {
+     name:"John",
+     age:35
+     },
+     {
+     name:"Sara",
+          age:35
+     }
+   ];    
+   
+   var output='';
+   for(var i=0;i<people.length;i++) {
+    console.log(people[i].name);   
+    output += '<li>'+people[i].name+'</li>';
+   }   
+   //document.getElementById('people').innerHTML = output; 
+   
+   //-------------------------------
+   //https://www.w3schools.com/js/js_ajax_http_send.asp
+   
+   
+   
+   function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        
+      console.log(this.responseText); 
+      
+      var response = JSON.parse(this.responseText);
+      //console.log(response.people);
+      //document.getElementById("demo").innerHTML = this.responseText;
+      
+      var people = response.people;
+      
+        var output='';
+      for(var i=0;i<people.length;i++) {
+        //console.log(people[i].name);   
+        output += '<li>'+people[i].name+'</li>';
+      }   
+       document.getElementById('people').innerHTML = output; 
+     
+    }
+  };
+  xhttp.open("GET", "people.json", true);
+  xhttp.send();
+}
+loadDoc();   
+
+//nodejs
+/*
+npm install -g live-server
+
+live-server
+http://127.0.0.1:8080
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+Bigos;10.5;15;ziemniaki, surówka
+
+Golonka;12.3;35;ziemniaki w mundurkach, surówka
+
+Schabowy;9.5;20;frytki, ketchup
+
+Mielone;7.5;15;ziemniaki, surówka
+
+deVolay;11.5;25;frytki, ketchup, surówki
+
+Karkówka;12;20;ziemniaki w mundurkach, pomidorki
+
+Sandacz po Grenlandzku;28;39;frytki, cytryna, zestaw sosów

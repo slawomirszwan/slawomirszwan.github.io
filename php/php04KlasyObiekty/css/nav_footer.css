@@ -1,0 +1,154 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-03-17, 18:58:16
+    Author     : Leszek Słowikowski
+*/
+nav{
+    position:fixed;
+    top:0;
+    width:99%;
+}
+/*dla wszystkich elementów z identyfikatorem menu*/
+/*dla wszystkich elementów potomnych elementu z identyfikatorem menu*/
+#menu, #menu ul {
+    margin: 0; /*ustaw margines na 0*/
+    padding: 0;/*ustaw odstęp na 0*/
+    list-style: none; /*usuń znaki wypunktowania*/
+}
+/*dla elementu z identyfikatorem menu*/
+#menu {
+    width: 99%;/*szerokość elementu 99% strony*/
+    margin: 0; /*margines 0*/
+    border: 1px solid #222; /*ramka 1px, ciągła, kolor czarny*/
+    background-color: #111; /*kolor tła czarny*/
+    /*ustaw gradient tła łagodne przejście czerni*/
+    background-image: linear-gradient(#555, #111);
+    border-radius: 6px; /*zaokrąglij rogi*/
+    box-shadow: 0 5px 5px #777; /*dodaj cień do elementu*/
+}                        
+/*dla elementów potomnych <li> identyfikatora menu*/
+#menu li {
+    float: left; /*opływanie z lewej strony*/
+    border-right: 1px solid #222; /*prawa ramka 1px, ciągła czarna*/
+    box-shadow: 1px 0 0 #444; /*dodaj cień*/
+    position: relative; /*pozycja względna*/
+}
+/*dla elementów potomnych <a> identyfikatora menu*/
+#menu a {
+    float: left;/*opływanie z lewej strony*/
+    padding: 12px 30px; /*odstęp góra-dół:12px, prawy-lewy:30px*/
+    color: #999; /*kolor tekstu szary*/
+    text-transform: uppercase;/*zamień tekst na duże litery*/
+    font: bold 12px Arial, Helvetica; /*ustaw czcionkę*/
+    text-decoration: none; /*wyczyść efekty czcionki*/
+    text-shadow: 0 1px 0 #000;/*dodaj cień do tekstu*/
+}
+/*po najechaniu na element <li> znajdujący się wewnątrz znacznika
+  z identyfikatorem menu ustaw elementowi <a>*/
+#menu li:hover > a {
+    color: #fafafa; /*tekst na odcień bieli*/
+}
+/*trik normalizujący różnice w przeglądarkach*/
+/*przed i po znaczniku z identyfikatorem menu*/
+#menu:before,
+#menu:after {
+    content: ""; /*dodaj pustą zawartość*/
+    display: table; /*pokaż ją jako tabelę*/
+}
+/*za znacznikiem z identyfikatorem menu*/
+#menu:after {
+    clear: both; /*zabroń opływania*/
+}
+/* dla wszystkich elementuw ul znajdujących się wewnątrz 
+ elementu z identyfikatorem menu*/
+#menu ul {
+    visibility: hidden; /*ukryj element*/
+    position: absolute; /*przyczep element do nadrzędnego:*/
+    top: 38px; /*38px od góry poniżej menu głównego*/
+    left: 0; /*0 z lewej strony*/
+    z-index: 1; /*przesuń element na wierzch*/   
+    margin: 20px 0 0 0; /*ustaw górny margines na 20px*/
+    opacity: 0; /*ustaw przezroczystość na 0*/
+    background: #444; /*ustaw kolor tła*/  
+    background: linear-gradient(#444, #111); /*ustaw gradient tła*/
+    box-shadow: 0 -1px 0 rgba(255,255,255,.3); /*ustaw cień*/
+    border-radius: 3px; /*zaokrąglij rogi ramki*/
+    transition: all .2s ease-in-out; /*dodaj efekt przejścia*/
+}
+/* po najechaniu myszką na li znajdujący się wewnątrz
+  elementu o indeksie menu ustaw dla potomka ul
+  tego elementu: */
+#menu li:hover > ul {
+    opacity: 1; /*nieprzezroczystość na 1*/
+    visibility: visible; /*obiekt widoczny*/
+    margin: 0; /*margines na 0*/
+}                        
+
+/*każdy element a znajdujący się wewnątrz elementu ul,
+  który znajduje się wewnątrz elementu o identyfikatorze menu*/
+#menu ul a {    
+    padding: 10px; /*wypaduj 10px* z każdej strony*/
+    width: 100px;  /*ustaw szerokość na 160px*/
+    display: block; /*wyświetl jko element blokowy*/
+    white-space: nowrap; /*nie zawijaj tekstu oddzielonego spacjami*/
+    float: none;/*nie opływaj*/
+    text-transform: none;/*nie zmieniaj tekstu np upercase*/
+}
+/*dla każdego elementu ul znajdującego się wewnątrz elementu ul, 
+ które znajduje się w elemencie o identyfikatorze menu*/
+#menu ul ul {
+    top: 0; /*przywiąż element do górnej krawędzi*/
+    left: 120px;/*przywiąż do lewej krawędzi przesuwając o 122px
+    w skład 122px wchodzi: 
+       100px szerokości elemenu a znajdującego się wewnątrz nadrzędnego ul
+       20px marginesu nadrzędnego ul
+       2px ramki elementów nadrzędnych         
+    */                
+    margin: 0 0 0 20px;/*ustaw dolny margines na 20px*/
+    /*ustawiamy cień dla elementu*/
+    box-shadow: -1px 0 0 rgba(255,255,255,.3);
+}
+/*każdy element li znajdujący się wewnątrz ul, który zawiera się
+ w elemencie o identyfikatorze menu*/
+#menu ul li {
+    float: none; /*usuń opływanie*/
+    display: block; /*wyświetl jako element blokowy*/
+    border: 0; /*usuń ramkę*/
+    box-shadow: 0 1px 0 #111, 0 2px 0 #666; /*dodaj cień*/
+}            
+/*dla ostatniego elementu li znajdującego się wewnątrz ul, 
+  które zawiera się wewnątrz elementu z identyfikatorem menu*/
+#menu ul li:last-child {   
+    box-shadow: none; /*usuń cieniowanie*/   
+}
+/*ustawienia stopki*/
+footer{                
+    position: fixed; /*pozycja przywiązana do okna przeglądarki*/
+    bottom:1px; /* 1px od dolnej krawędzi*/
+    right:1px; /* 1px od dolnej krawędzi*/
+    width: 99%; /*szerokość 99% okna przeglądarki*/
+    margin-right: 10px; /*wyzeruj margines*/
+    border: 1px solid #222; /*ramka 1px ciągła czarna*/
+    background-color: #111; /*tło czarne*/
+    /*ustaw gradient tła łagodne przejście czerni*/
+    background-image: linear-gradient(#444, #111);
+    border-radius: 6px;/*zaokrąglij rogi*/
+    box-shadow: 0 -5px 5px #777; /*dodaj cień do elementu*/
+}    
+/*dla elementów p znajdujących się wewnątrz elementu footer*/
+footer p{
+    margin: 10px; /*ustaw margines na 10px*/
+    padding: 0px 10px;/*odstęp z lewej i prawej 10px*/                
+    float: left;/*opływanie z lewej strony*/                
+    color: #999; /*kolor tekstu szary*/                
+    font: bold 12px Arial, Helvetica; /*ustaw czcionkę*/
+    text-decoration: none; /*wyczyść efekty czcionki*/
+    text-shadow: 0 1px 0 #000;/*dodaj cień do tekstu*/
+}
+main{
+    padding-top : 40px;    
+}

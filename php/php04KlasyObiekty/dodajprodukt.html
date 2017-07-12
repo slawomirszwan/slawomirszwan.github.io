@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dopisywanie produktu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>      
+        <!-- tworzymy formularz wprowadzania prosuktów -->
+        <form id="dopisywanie" action="przyklad06.php">
+            <table>
+                <tr>
+                    <td>Produkt</td>
+                    <td><input type="text" name="produkt" value="" size="20" /></td>    
+                </tr>    
+                <tr>
+                    <td>Cena</td>
+                    <td><input type="number" name="cena" value="" min="0" max="300" step="0.1" /></td>    
+                </tr>                    
+            </table>                                  
+        </form>
+        <input id="dopisz" type="submit" value="dopisz" name="dopisz" /> 
+        <p id="informacja"></p>
+        <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+        <script>
+            $("#dopisz").click(function(){
+               //pobieramy dane z formularza i za pomocą metody .serialize()
+               //tworzymy ciąg: ?potrawa=xxz&cena=yyy
+               var dane = $("#dopisywanie").serialize();
+               //na końcu ciągu dopisuję jeszce polecenie dopisz:
+               dane += "&dopisz=dopisz";
+               //wysyłam dane do webserwisu: przyklad06.php
+               $.get("przyklad07.php", dane, function(wynik, status){ 
+                  //jeżeli wszystko poszło prawidłowo webserwis
+                  //zwróci success jako wynik operacji oraz dane zwrotne
+                  if(status=="success"){
+                      //informacja zwrotna jest w postaci: produkt;cena;czas;dodatki
+                      //funkcją split przekształcam tę linijkę na tablicę
+                     var zwrotka = wynik.split(";");
+                     //tworzę napis informujący o dopisaniu potrawy
+                     var info = "Dodano: produkt "+ zwrotka[0] + "<br>" +                                
+                                "w cenie: "+zwrotka[1] + "zł <br>";
+                    //wypisuję informację w elemencie o id="informacja"    
+                    $("#informacja").html(info);
+                  }               
+                });                                       
+            });
+        </script>
+        
+    </body>
+</html>

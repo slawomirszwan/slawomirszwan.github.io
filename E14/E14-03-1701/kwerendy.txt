@@ -1,0 +1,18 @@
+﻿   – zapytanie 1: wstawiające do tabeli Uzytkownicy rekord z danymi: imię: Jan; nazwisko: Nowak; adres: Warszawa, Kopernika 4; telefon: 608111222
+INSERT INTO `uzytkownicy`
+(`imie`, `nazwisko`, `adres`, `telefon`) 
+VALUES 
+('Jan','Nowak','Warszawa, Kopernika4','6081112222');
+
+   – zapytanie 2: wstawiające do tabeli Konta rekord z danymi: login:janNowak; hasło: qwerty
+INSERT INTO `konta`
+(`login`, `haslo`) VALUES 
+('janNowak','qwerty');
+
+   – zapytanie 3: wybierające jedynie imię i nazwisko ze wszystkich rekordów tabeli Uzytkownicy
+SELECT imie,nazwisko FROM `uzytkownicy`
+
+   – zapytanie 4: wybierające jedynie adres z tabeli Uzytkownicy, dla którego pole id jest równe 1
+SELECT adres FROM `uzytkownicy` WHERE id=1 ;
+
+   
