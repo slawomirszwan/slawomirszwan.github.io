@@ -1,0 +1,39 @@
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,800' rel='stylesheet' type='text/css'>
+<style>
+body {
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+}
+.main-nav li {
+  width: 100px;
+}
+.main-nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 21px;
+  font-weight: 600;
+  color: #08a9d1;
+}
+.main-nav a:hover {
+  text-decoration: underline;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;      /*make it an inline block instead of a column list*/
+  flex-direction: row-reverse;      /*'flex-direction' property allow us to set the direction of content flowing. In case of 'row-reverse', it shifts the element to the opposite side and reverses its children*/
+  /*flex-direction: column;*/      /*this would make it a column again*/
+}
+</style>
+</head>
+<body>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>      
+    </ul>
+  </nav>
+</body>

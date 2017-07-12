@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "
+-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<head>
+<title>056</title>
+<meta http-equiv="CONTENT-LANGUAGE" CONTENT="PL">
+<meta http-equiv="content-type" CONTENT="text/html; CHARSET=iso-8859-2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+</head>
+<body onmousedown="getEventType(event)">
+<script>
+document.write("<h1>056</h1>");
+function stoper(zdarzenie)
+{
+alert(zdarzenie.timeStamp);
+}
+</script>
+<p onclick="stoper(event)">Kliknij akapit. Wyświetlone zostanie okno z mierzonym w milisekundach czasem, który upłynął od utworzenia zdarzenia.</p>
+</body></html>

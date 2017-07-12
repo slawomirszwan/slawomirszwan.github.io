@@ -1,0 +1,60 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,800' rel='stylesheet' type='text/css'>
+  <style>
+body {
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+}
+.main-nav li {
+  width: 100px;
+}
+.main-nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 21px;
+  font-weight: 600;
+  color: #08a9d1;
+}
+.main-nav a:hover {
+  text-decoration: underline;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;      /*make it an inline block instead of a column list*/
+}
+.main-header {
+  background: red;
+  padding: 10px;
+  order: 1;      /*after implementation of flex -in line 37- into <body> we can add an 'order' property into css selectors to rearrange the order of html elements*/
+}
+.main-content {
+  background: yellow;
+  min-height: 40vh;
+  padding: 10px;
+}
+.main-footer {
+  background: green;
+  padding: 10px;
+  order: -1;      /*default 'order' of all elements is 0, then the order depends on our html code. Else it holds: the smaller element´s 'order' number, the sooner its appearance. In our case we got main-footer with -1 order first, then 0 orders and lastly main-header with +1 order*/  
+}
+body {
+  display: flex;      /*implementation of 'display: flex' into body allowed us to add 'order' property into css selectors to rearrange the order of html elements*/
+  flex-direction: column;
+}
+
+</style>
+  </head>
+<body>
+  <header class="main-header">Header</header>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>      
+    </ul>
+  </nav>
+  <main class="main-content">Content</main>
+  <footer class="main-footer">Footer</footer>
+</body>

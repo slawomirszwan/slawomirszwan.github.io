@@ -1,0 +1,27 @@
+  
+ header, #footer {
+	background-color: #773D24;
+	color: white;
+	text-align:center;
+	padding:20px;
+ }
+ 
+ main{
+	background-color:#B97E65;
+	height:600px;
+	
+	background: linear-gradient(to right bottom,red,white,green);
+	background: url(import.png);
+/*	background-repeat: no-repeat;*/
+ }
+ table{
+	 width:80%;
+	 /* 30px!! odstep*/
+	 border-spacing: 30px;
+ }
+ table td {
+	 background-color:#DEAD98;
+ }
+ p {
+	 text-align:center;
+ }

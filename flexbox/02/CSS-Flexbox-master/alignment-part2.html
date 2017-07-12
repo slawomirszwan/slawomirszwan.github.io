@@ -1,0 +1,56 @@
+﻿<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,800' rel='stylesheet' type='text/css'>
+<style>
+:root {
+  height: 100%;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  min-height: 100%;
+  background: #333;
+}
+h1 {
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+p {
+  margin: 5px 0;
+}
+article {
+  box-siying: border-box;
+  padding: 13px;
+  background: #FFF;
+  margin: 5px;
+  flex: 1;      /*makes all 'article's the same width*/
+}
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;      /*'align-items' property allows us to stretch the children. Default settings is 'stretch' i.e. all children to the full capacity, in our case we got 'flex-direction: row' → it stretches into full height*/
+  /*align-items: flex-start;*/
+  /*align-items: flex-end;*/
+  /*align-items: center;*/
+  /*align-items: baseline;*/   
+}
+.not-real {
+  align-self: flex-end;     /*changing one child individually instead of the whole container. Default settings is 'auto'*/  
+}
+</style>
+</head>
+<body>
+  <article class="fake-article">
+    <header><h1>Fake Article</h1></header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+  </article>
+  <article class="not-real">
+    <header><h1>Not Real</h1></header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae cupiditate dolore doloribus!</p>
+  </article>
+  <article class="phoney">
+    <header><h1>Phoney</h1></header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae assumenda officia quibusdam deleniti quibusdam deleniti vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+  </article>
+</body>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html> 
+<head>
+  <meta charset="iso-8859-2">
+  <title>Potęgowanie</title>
+  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header> 
+    <img src="baner.jpg" alt="baner strony">    
+  </header>
+  <nav> 
+    <p>Menu</p>
+    <ul> 
+      <li><a href="strona1.html">proste działania</a></li>
+      <li><a href="strona2.html">potęgowanie</a></li>
+
+    </ul>
+  </nav>
+  <main>
+       <h1>POTĘGOWANIE</h1>
+	  
+	  <form>
+		<label>Podaj podstawę potegi:</label><input name="liczba1" id="liczba1"><br>
+		<label>Podaj dodatni, całkowity wykładnik potęgi:</label><input name="liczba2" id="liczba2"><br>
+
+	  </form>
+		<button onclick="poteguj()">POTĘGOWANIE</button><br>
+		<span id="wynik"></span>     
+  </main>
+  </footer>
+  </footer>
+<script>
+var form= document.forms[0];
+
+	function sprawdzLiczby() {
+		var liczba1 = form.liczba1.value;
+		var liczba2 = form.liczba2.value;	
+		
+		console.log(liczba1,liczba2);
+		
+		if ((liczba1=="") || (liczba2=="")) {
+			alert("Wpisz podstawę i wykładnik potęgi");
+			return false;
+		}
+		return true;
+	}
+
+
+	function poteguj() {
+	
+		if (!sprawdzLiczby()) 
+			return;
+		var liczba1 = form.liczba1.value;
+		var liczba2 = form.liczba2.value;	
+			
+				console.log(liczba2);
+		if	(liczba2<=0) {
+			alert("Wykładnik potęgi musi być dodatni");
+			return;
+		}
+		var wynik = Math.pow(liczba1,liczba2);
+	
+		var span=document.getElementById("wynik");
+
+		span.innerHTML = "Wynik działania wynosi: "+wynik;
+	}
+</script>
+  </body>
+</html>

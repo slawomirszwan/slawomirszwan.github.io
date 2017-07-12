@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  
+  <style>
+    table#myTable {
+      background-color: lightgrey;   
+      border: 1px solid grey;
+      
+      border-collapse: collapse;
+    }         
+    td,th {
+      border: 1px solid grey;   
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  <table id="myTable">    
+    <caption>This is a table caption</caption>
+    <thead>
+      <tr>
+          <th>col1</th>
+          <th>col2</th>
+      </tr>
+    </thead>
+    <thead>
+      <tr>
+          <th>col3</th>
+          <th>col4</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+         <td>Sum</td>
+         <td>$180</td>
+      </tr>
+     </tfoot>
+
+    <tbody>
+    <tr  id="myRow">
+      <td>1-1</td><td>1-2</td>
+    </tr>
+    <tr>
+      <td>2-1</td>
+      <td>2-2</td>
+    </tr>
+    <tr>
+      <td>3-1</td>
+      <td>3-2</td>
+    </tr>  
+    </tbody>
+  </table>  
+  
+  <button onclick="myFunction1()">Try it</button>
+                
+  <input type="text" id="myInput" onkeyup="myFunction2()" placeholder="Search for names..">
+  
+  <hr>
+  <button onclick="myFunction11()">podaj ile wierszy</button> 
+  <button onclick="myFunction12()">nazwany tr z id</button>  
+  
+  <button onclick="myCreateFunction()">Create thead</button>
+  <button onclick="myDeleteFunction()">Delete thead</button>
+  
+  <p id="demo"></p>
+  
+  <hr>
+  <script> 
+   function myFunction11() {
+    var table = document.getElementById("myTable"); 
+    var x = table.rows.length;   
+    //rows to kolekcja wszystkich <tr>
+    //w kolejnoci jak wystepują
+    
+    document.getElementById("demo").innerHTML += "<br> Found " + x + " tr elements in the table.";
+      
+    /*    
+    //HTMLCollection Object
+    table.rows[0]
+    table.rows.index(5)  //null jesli index poza zakresem // od 0
+    
+    table.rows.namedItem(id) //okreslone id
+    
+    alert(document.getElementById("myTable").rows[0].innerHTML;
+    
+    */
+    
+    /*  
+    var x = document.getElementById("myTable");  
+    var x = document.createElement("TABLE");
+             
+    table.caption   -element caption or null
+    document.getElementById("myTable").caption.innerHTML 
+    ---
+    table.tFoot
+    table.tHead
+    table.rows    kolekcja wszystkich tr (wszędzie)
+    var x = document.getElementById("myTable").rows.length    
+    -----------
+    table.tBodies  kolekcja wszystkich tbody
+    
+    createCaption()
+    deleteCaption()
+    
+    createTFoot()
+    deleteTFoot()
+    
+    createTHead()
+    deleteTHead()
+    
+    insertRow()
+    deleteRow()  
+    
+    insertCell
+    deleteCell  
+    
+    https://www.w3schools.com/jsref/dom_obj_table.asp
+    
+    cels kolekcja - zwraca wszystkie td i th w tabeli
+    
+    */
+    var x = table.rows[0].cells.length;     
+    info("Found " + x + " td/th elements in the table.");
+  }
+  
+  function myFunction12() {
+    var table = document.getElementById("myTable"); 
+    var rows = table.rows;
+    
+    info(rows.namedItem("myRow").innerHTML);
+                                                                             
+    rows.namedItem("myRow").cells[0].innerHTML = "aqq";
+            
+    //========================================
+    // Create an empty <tr> element and add it to the 1st position of the table:
+    var row = table.insertRow(0); 
+    //index:  0 pierwszy
+    //-1 na ostatniej pozycji
+    
+
+    // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+
+    // Add some text to the new cells:
+    cell1.innerHTML = "NEW CELL1";
+    cell2.innerHTML = "NEW CELL2";  
+    row.deleteCell(-1);
+                        
+    //table.deleteRow(0);
+    table.deleteRow(-1); //usuwa ostatni row
+    //========================================
+    
+    //dodajemy cell
+    rows[0].insertCell()    
+    
+    
+    //var x = document.createElement("TR");
+    
+    alert(rows.namedItem("myRow").innerHTML);
+  }
+  
+  function info(message) {
+    document.getElementById("demo").innerHTML += "<br>"+ message;
+  }
+  
+  function myCreateFunction() {
+    var table = document.getElementById("myTable");
+    var header = table.createTHead();
+    var row = header.insertRow(0);
+    var cell = row.insertCell(0);
+    cell.innerHTML = "<b>This is a table header1</b>";
+    
+    var cell = row.insertCell(-1);
+    cell.innerHTML = "<b>This is a table header+</b>";
+
+}
+
+function myDeleteFunction() {
+    document.getElementById("myTable").deleteTHead();
+}
+  
+    //Table object DOM
+    
+    var x = document.getElementById("myTable");      
+    
+    console.log(x);
+    
+    var x1 = document.getElementById("myTable").rows.length; 
+    console.log(x1);  
+                    
+    //HTMLTableElement
+    //rows:HTMLCollection
+    //HTMLTableRowElement
+    
+
+    function myFunction1() {
+      alert(document.getElementById("myTable").rows[0].innerHTML);
+    }  
+    
+    
+    //===================================
+    function myFunction() { 
+    
+      var idTable = "myTable2";    
+      
+      var x = document.createElement("TABLE");
+      x.setAttribute("id", idTable);
+      document.body.appendChild(x);
+
+      var y = document.createElement("TR");
+      y.setAttribute("id", "myTr");
+      
+      //document.getElementById(idTable).appendChild(y);
+      x.appendChild(y);
+
+      var z = document.createElement("TD");
+      var t = document.createTextNode("cell");
+      z.appendChild(t);
+      
+      //document.getElementById("myTr").appendChild(z);
+      y.appendChild(z);
+    }   
+    myFunction(); 
+    
+    
+    function myFunction2() {
+  // Declare variables
+  var input, filter, table, tr, td, i; 
+  
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+
+
+function xyz1(tabelaData) {
+/*  var tabelaData = {
+    id: "myTable2", 
+    caption: "tabelka x1",
+    columns: ["b","a"],
+    dataRows: [
+      { a:10, b:11},
+      { a:10, b:"fghfgsh"},
+      { a:10, b:11},
+      { a:10, b:11},
+    ]
+  };
+*/  
+     
+      var tabela = document.createElement("TABLE");
+      tabela.setAttribute("id", tabelaData.id);
+      
+       var caption = tabela.createCaption();
+       caption.innerHTML = "<b>" + tabelaData.caption + "</b>";  
+                                    
+      var columnCount = tabelaData.columns.length; 
+               
+      if (!tabela.tHead) {
+        //--header-----------------
+        var header = tabela.createTHead();
+        var row = header.insertRow(0);
+        
+         for(var j=0; j<columnCount; j++) {
+                                           
+            var headerName = tabelaData.columns[j].header;
+            
+            var cell = row.insertCell(-1);
+            cell.innerHTML = "<b>" + headerName + "</b>";
+         }
+         //-------------------------      
+      }
+      
+      
+      //--footer-----------------
+      var footer = tabela.createTFoot();
+      var rowF = footer.insertRow(0);
+      
+       for(var j=0; j<columnCount; j++) {
+                                         
+          var footerName = tabelaData.columns[j].footer;
+          
+          var cell = rowF.insertCell(-1);
+          cell.innerHTML = "<b>" + footerName + "</b>";
+       }
+        //-------------------------      
+            
+        
+      //---data     
+      ile = tabelaData.dataRows.length;
+
+      var body = tabela.createTBody();
+
+      for(var i=0; i<ile; i++) {  
+               
+         var row = body.insertRow(-1);         
+                               
+         var obj = tabelaData.dataRows[i];
+         for(var j=0; j<columnCount; j++) {
+                                           
+            var columnName = tabelaData.columns[j].property;
+            
+            var cell = row.insertCell(-1);
+            cell.innerHTML = obj[columnName];
+         }
+      }
+      
+      document.body.appendChild(tabela);
+}
+//================================
+//uzycie
+  var tabelaData = {
+    id: "myTable2", 
+    caption: "tabelka x1",
+//    columns: ["b","a"],
+    columns: [
+      {      
+        property: "b",
+        header: "kolumna B",
+        footer: "fajnieB", 
+        //new Function ([arg1[, arg2[, ...argN]],] functionBody) 
+        //var adder = new Function('a', 'b', 'return a + b');
+        
+        //template: function(value) {
+        //}
+      },
+      {      
+        property: "a",
+        header: "kolumna A",
+        footer: "fajnieA", 
+        //new Function ([arg1[, arg2[, ...argN]],] functionBody) 
+        //var adder = new Function('a', 'b', 'return a + b');
+        
+        //template: function(value) {
+        //}
+      },
+    ],
+    dataRows: [
+      { a:10, b:11},
+      { a:10, b:"fghfgsh"},
+      { a:10, b:11},
+      { a:10, b:11},
+    ]
+  };
+
+xyz1(tabelaData);
+//--------------------------------
+/*
+  var tabelaData = {
+    id: "myTable3", 
+    caption: "tabelka x3",
+    columns: [1,0,1],
+    dataRows: [
+      [10,11],
+      [10,11],
+      [10,11],
+      [10,11],
+    ]
+  };
+
+xyz1(tabelaData);
+*/
+//======================================
+
+  </script>
+</body>
+</html>

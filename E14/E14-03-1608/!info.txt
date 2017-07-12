@@ -1,0 +1,2 @@
+cd C:\Projekty\github\slawomirszwan.github.io\E14\E14-03-1608
+php -S 0.0.0.0:5555

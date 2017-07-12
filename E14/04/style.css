@@ -1,0 +1,42 @@
+
+div {
+  min-height: 50px;
+  background-color: grey;
+  background: linear-gradient(white,grey);  
+  
+  border: 1px solid black;
+} 
+
+#naglowek {
+  
+}
+
+#naglowek img {
+  height:20px;
+  width:20px;
+  background-color:yellow; 
+}
+
+#menu {
+  width: 15%; 
+  float:left; 
+  
+  height: 500px;
+}
+
+#tresc {
+  height: 500px;
+  overflow:auto;  
+}
+
+#nowosci {
+  width: 15%;
+  float:right;
+  height: 500px;
+  
+}
+
+#stan {
+  clear:both;
+  
+}

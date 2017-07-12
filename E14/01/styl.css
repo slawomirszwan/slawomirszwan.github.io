@@ -1,0 +1,58 @@
+html {
+    box-sizing: border-box;
+    background-color: green;
+}
+* {
+    box-sizing: inherit;
+}
+
+
+html, body, div {
+    margin:0;
+    padding:0;
+}
+
+div {
+    outline: 1px solid red;
+}
+
+h1 {
+    margin:0;
+}
+#baner {
+    background-color: #875080;
+    text-align: center;
+    height: 50px;
+}
+
+#panel-lewy {
+    background-color: #C2A6BF;
+    height: 300px;
+    width: 75%;
+
+    display: block;
+    float: left;
+
+
+}
+
+#panel-prawy {
+    background-color: #A1759C;
+    height: 300px;
+    width: 25%;
+
+    float:right;
+    display:block;
+
+}
+
+#stopka {
+    background-color: #875080;
+    text-align: right;
+
+
+}
+
+.x {
+    bak
+}

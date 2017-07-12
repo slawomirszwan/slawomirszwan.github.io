@@ -1,0 +1,176 @@
+﻿@import url("../style.css");
+html {
+	background: rgb(245,245,245);
+}
+body {
+	margin: 0px auto;
+	padding: 0px;
+	counter-reset: cwiczenia;
+	color: rgb(0,0,0);
+	width: 987px;
+}
+body>section {
+	background: rgb(255,255,255);
+	box-shadow: 1px 1px 3px rgb(0, 0, 0);
+	column-count:2;
+	column-gap: 23.5px;
+	column-rule: 1px solid silver;
+	-webkit-column-count:2;
+	-webkit-column-gap: 23.5px;
+	-webkit-column-rule: 1px solid silver;
+	padding: 94px;
+	margin: 20px auto;
+	width: 799px;
+	height:1207.9px;
+	z-index:2;
+	position: relative;
+}
+svg {
+	vertical-align:  middle;
+	margin: 3px 3px;
+}
+header nav {
+	position:fixed;
+	top: 5px;
+	right:5px;
+	text-align:center;		
+}
+
+
+
+.k1, .k2 {
+	float: left;
+	outline: 1px solid silver;
+	margin: 5px;
+	padding: 5px;
+	height: 590px;
+}
+.k1 {
+	width: 472px;	
+}
+.k2 {
+	width: 472px;
+}
+.header, .stopka {
+font-size: 10px;	
+padding: 1px;
+	margin: 5px;
+	padding: 5px;
+	clear: left;
+width: 967px;
+height: 20px;	
+color: rgb(102,102, 102);
+}
+.stopka {
+text-align: center;
+}
+.ps {
+	clear: left;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(51,51,51)
+	background: none;
+}
+
+ ul, ol {
+	margin: 10px 0px 5px 20px;
+}
+
+h3:before {
+	content: "Ćwiczenie " counter(cwiczenia) ". ";
+	counter-increment: cwiczenia;
+}
+
+hr {
+	width: 50%;
+	text-align: left;
+	margin-top: 20px;
+	margin-bottom: 10px;
+
+}
+hr:first-child {
+	width: 100%;
+}
+.przypisy  {
+	margin: 10px 0px 5px 0px;
+}
+
+.przypisy li {
+	font-size: 10.5px;
+	margin: 10px 0px 5px 40px;
+}
+pre {
+	background: rgb(235, 235, 235);
+	border-left: solid 5px rgb(204, 204, 204);
+	font-size: 12px;
+	margin: 10px 0px;
+	padding: 5px 5px;
+	color: rgb(0,0,0);
+}
+p, li {
+	text-align: left;
+	font-size: 11px;
+	margin: 0px 10px 0px 10px;
+	color: rgb(51,51,51);
+}
+nav li {
+	list-style: none;
+	font-size: 11px;
+	margin: 0px 10px 0px 10px;
+	color: rgb(51,51,51);
+}
+@media screen and (max-width: 987px) {
+	body {
+		margin: 10px auto;
+		max-width: auto;
+		width: auto;
+	}
+	section {
+		box-shadow: none;
+		column-count:1;
+		-webkit-column-count:1;
+		padding: 50px;
+		margin: 0px auto;
+		width: 392px;
+		height: auto;
+	}
+}
+@media screen and (min-width: 1395.9px) {
+	body {
+		width:   1395.9px;
+		
+	}
+	section {
+		column-count:3;
+		-webkit-column-count:3;
+		width: 1207.9px;
+		height: 799px;
+	}
+}
+@media print {
+	html {
+	background: none;
+	}
+	body  {	
+	line-height:75%;
+	width: 210mm;
+	height: 297mm;
+	font-size-adjust:0.3;
+	}
+	section {
+	column-count:2;
+	column-gap: 5mm;
+	column-rule: 0.5mm solid silver;
+	box-shadow: none;
+	padding: 20mm;
+	margin: 0mm auto;
+	width: 170mm;
+	height: 257mm;
+	page-break-after: always;
+	}
+}
+@page {
+margin: -7mm -3mm;
+}

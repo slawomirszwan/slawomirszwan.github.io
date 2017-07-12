@@ -1,0 +1,1 @@
+document.write("<a href=\"http://helion.pl/\"><img src=\"logo_helionpl.png\" width=\"136\" height=\"76\" alt=\"help\" /></a>")

@@ -1,0 +1,77 @@
+* {
+  outline:1px solid red;
+}
+
+html {
+  background-color: gray;    
+  padding: 0 50px;
+}
+body {
+/*  width: 900px;
+  margin: 0 auto;*/
+  
+  margin:0;
+  padding:0;
+  
+  background-color: lightgreen;
+                     
+  font-family:Arial,sans-serif;
+  font-size:150%;
+  font-style:italic;
+}  
+
+div {
+  margin:0;
+  padding:0;
+}
+#naglowek {
+  height: 100px;  
+  text-align:center;
+}
+#lewa {
+  height: 500px;
+  width: 200px;  
+  background-color: yellow;
+  
+  float:left;         
+  
+  text-align:center;
+}
+#srodek {
+  background-color: gold;
+  height:480px;  
+}
+#prawa {
+  height: 500px;
+  width: 700px;           
+  background-color: pink;
+  
+  float:right;
+  overflow: auto;
+  
+}
+#prawa table {
+  border:1px solid black;
+  margin: 0 auto;   
+  
+  border-collapse:collapse;
+  
+  /*font-size:50%;*/
+}
+#prawa table th {
+  background-color: blue;
+  color: yellow;
+  padding: 0 1em;
+}
+#prawa table td {
+  border:1px dashed green;  
+  text-align: center;
+}
+#stopka {
+  height: 100px;        
+  background-color: lightblue;
+  
+  clear: both;
+  
+  text-align:center;
+}

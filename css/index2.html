@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Test</title>
+	
+	<style>
+	.spis {
+		background-color: brown;
+		min-height: 300px;
+		color:white;
+	}
+	
+	.spis div {
+		background-color: blue;	
+	}
+	.spis div span {
+		display: inline-block;
+	}
+	
+	.spis div span:nth-child(1) {
+		background-color: green;
+		width: 20%;
+	}
+	.spis div span:nth-child(2) {
+		background-color: red;	
+		text-align: center;
+		width:59%;
+	}
+	.spis div span:nth-child(3) {
+		background-color: yellow;	
+		color: blue;
+		width: 20%;
+		text-align: right;
+	}
+	
+	/*------------------------------------------*/
+	.spis2 {
+		background-color: brown;
+		min-height: 300px;
+		color:white;
+	}
+
+	.spis2 div {
+		display:flex;
+		/*flex-direction:column;*/
+		flex-grow:1;
+		justify-content: space-between;
+	}
+	
+	
+	.spis2 div span:nth-child(1) {
+		width:15%;
+		background-color:green;
+	}
+	.spis2 div span:nth-child(2) {
+		flex-grow:1;
+		background-color:blue;
+	}
+
+
+
+	
+	</style>
+</head>
+<body>
+	<div class="spis">
+		<h1>Spis treści</h1>
+		<div>
+			<span>Rozdział 1.</span>
+			<span>Struktura</span>
+			<span>10</span>
+		</div>
+		<div>
+			<span>Rozdział 1.</span>
+			<span>Struktura i zsvcsvxdv sfsgfsfgfs</span>
+			<span>10</span>
+		</div>
+		<div>
+			<span>Rozdział 133.</span>
+			<span>Struktura sfgsgsfgfs</span>
+			<span>10</span>
+		</div>
+		<div>
+			<span>Rozdział 13333.</span>
+			<span>Struktura s</span>
+			<span>10</span>
+		</div>
+	</div>
+	
+	<hr>
+		<div class="spis2">
+		<h1>Spis treści</h1>
+		<div>
+			<span>Rozdział 1.</span>
+			<span>Struktura</span>
+			<span>10</span>
+		</div>
+		<div>
+			<span>Rozdział 16.</span>
+			<span>Struktura i zsvcsvxdv sfsgfsfgfs</span>
+			<span>1000</span>
+		</div>
+		<div>
+			<span>Rozdział 1333.</span>
+			<span>Struktura sfgsgsfgfs</span>
+			<span>10000</span>
+		</div>
+		<div>
+			<span>Rozdział 133333</span>
+			<span>Struktura s</span>
+			<span>10</span>
+		</div>
+	</div>
+</body>
+</html>
