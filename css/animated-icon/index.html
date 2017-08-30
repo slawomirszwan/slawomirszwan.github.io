@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>JS Bin</title>
+  
+  <style>
+  fa-chain.animate:before{
+  animation: chainBrake 1s infinite linear;
+}
+@keyframes chainBrake{
+  0%{
+    content:"\f0c1"; *unicode of normal chain*/
+  }
+  25%{
+    content:"\f0c1"; *unicode of normal chain*/
+  }
+  50%{
+    content:"\f127"; *unicode of broken chain*/
+  }
+  75%{
+    content:"\f127"; *unicode of broken chain*/
+  }
+  100%{
+    content:"\f127"; *unicode of broken chain*/
+  }
+}
+  </style>
+</head>
+<body>
+  <i class="fa fa-chain fa-4x animate"></i>
+</body>
+</html>
