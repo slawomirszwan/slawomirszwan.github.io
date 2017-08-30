@@ -27,9 +27,37 @@
     content:"\f127"; *unicode of broken chain*/
   }
 }
+    
+  .fa-envelope.animate:before{
+  animation: envelopeOpen 1s infinite linear;
+}
+@keyframes envelopeOpen{
+  0%{
+    content:"\f0e0"; *unicode of normal chain*/
+  }
+  25%{
+    content:"\f0e0"; *unicode of normal chain*/
+  }
+  50%{
+    content:"\f2b6"; *unicode of broken chain*/
+  }
+  75%{
+    content:"\f2b6"; *unicode of broken chain*/
+  }
+  100%{
+    content:"\f2b6"; *unicode of broken chain*/
+  }
+}    
   </style>
 </head>
 <body>
+  <p>
+    animowane ikony fa
+    http://fontawesome.io/icons/
+    
+  </p>
+  
   <i class="fa fa-chain fa-4x animate"></i>
+  <i class="fa fa-envelope fa-4x animate"></i>
 </body>
 </html>
