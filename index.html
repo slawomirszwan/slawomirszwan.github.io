@@ -1,38 +1,116 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Document</title>
-  
+  <meta charset="UTF-8">
+  <title>Document</title> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css" rel="stylesheet">
   <style>
-    ul {
-      /*background-color: hsl(150,50%,50%);*/  
-      
-      display:flex;    
-      justify-content: space-around;  
-      flex-wrap: wrap;
-      
-      list-style-type: none;
-      padding:0;
-    }                                    
-    ul li a {
-      background-color: hsl(150,50%,70%);
-      padding: 0 2em 0 2em;
-    } 
-/*    * {
-      outline: 1px solid red;
-    }*/
   </style>
 </head>
 <body>
-  <ul>
-    <li><a href="flexbox/">flexbox</a></li>
-    <li><a href="json_i_ajax/">json_i_ajax</a></li>
-    <li><a href="site01/">site01</a></li>
-    <li><a href="svg/">svg</a></li>
-    <li><a href="test1/">test1</a></li>
-  </ul>
+
+  <div class="container">
+    <h1 class="center-align">
+      Moje kontakty
+    </h1>    
+     
+    <input type="text" id="filterInput" placeholder="Search names...">  
+    
+    <ul id="names" class="collection with-header">
+      <li class="collection-header">
+        <h5>CSS</h5>
+      </li> 
+      <li class="collection-item">
+        <a href="css/animated-icon">animated-icon</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">Adam</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">Anton</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">Alicja</a>
+      </li>  
+      
+      <li class="collection-header">
+        <h5>SVG</h5>
+      </li> 
+      <li class="collection-item">
+        <a href="#">BAlojzy</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">BAdam</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">BAnton</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">BAlicja</a>
+      </li>
+      
+      <li class="collection-header">
+        <h5>flexbox</h5>
+      </li> 
+      <li class="collection-item">
+        <a href="#">BAlojzy</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">BAdam</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">BAnton</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">BAlicja</a>
+      </li>
+      
+    </ul>
+    
+  </div> 
+                                            
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <script>
+    let filterInput = document.getElementById("filterInput");
+    
+    //add event listener
+    //onkeyup="" 
+    filterInput.addEventListener('keyup', filterNames);
+    
+    function filterNames(event) {
+       //console.log(1); 
+       //get value input
+       let filterValue = document.getElementById('filterInput').value.toUpperCase();
+       //console.log(filterValue);
+       
+       //get ul
+       let ul = document.getElementById('names');
+       //get items
+       let li = ul.querySelectorAll('li.collection-item');
+       
+       //loop trough collection items
+       for(let i=0; i<li.length;i++) {
+          let a= li[i].getElementsByTagName('a')[0];
+          //if matched
+          if(a.innerHTML.toUpperCase().indexOf(filterValue)>-1){
+             li[i].style.display = '';
+          }
+          else {
+            li[i].style.display = 'none';
+          }
+       }
+    }
+  
+  </script>
 </body>
 </html>
